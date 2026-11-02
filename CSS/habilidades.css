@@ -65,7 +65,7 @@
     padding: 2px 8px;
     font-size: 0.66rem;
     font-weight: 600;
-    color: #fbbf24;
-    background: rgba(251, 191, 36, 0.12);
-    border-color: rgba(251, 191, 36, 0.3);
+    color: var(--estado-texto);
+    background: var(--estado-fondo);
+    border-color: var(--estado-borde);
 }
