@@ -103,7 +103,7 @@ export const TRADUCCIONES_EN = {
 
     /* ----- Proyectos ----- */
     'Proyectos · María José Montepeque Zet': 'Projects · María José Montepeque Zet',
-    'Proyectos de María José Montepeque Zet: sistema experto en Python, paneles de gestión con JavaScript, sistemas colaborativos con Git y persistencia de datos.': 'Projects by María José Montepeque Zet: Python expert system, JavaScript management dashboards, collaborative Git systems and data persistence.',
+    'Proyectos de María José Montepeque Zet: backend con PostgreSQL y Docker Compose, un sistema experto en Python y aplicaciones web con JavaScript.': 'Projects by María José Montepeque Zet: backend with PostgreSQL and Docker Compose, a Python expert system and web applications with JavaScript.',
     'Lo que he construido': 'What I\'ve built',
     'Proyectos académicos y profesionales, con mi rol y las tecnologías aplicadas en cada uno.': 'Academic and professional projects, with my role and the technologies applied in each one.',
     'IA': 'AI',
@@ -113,10 +113,6 @@ export const TRADUCCIONES_EN = {
     'Plataforma de gestión educativa. Construí una SPA sin frameworks con dashboard de KPIs y CRUD de estudiantes con búsqueda multicriterio, filtros y paginación; diseñé un motor de validación con 20 reglas de negocio.': 'Education management platform. I built a framework-free SPA with a KPI dashboard and a student CRUD with multi-criteria search, filters and pagination; I designed a validation engine with 20 business rules.',
     'Gestión de Hotel': 'Hotel Management',
     'Sistema de gestión hotelera centrado en la lógica asíncrona de JavaScript. Implementé reservas, disponibilidad de habitaciones y flujos con promesas y <code>async/await</code>.': 'Hotel management system centered on JavaScript asynchronous logic. I implemented bookings, room availability and flows with promises and <code>async/await</code>.',
-    'Sistema de gestión administrativa para gimnasios bajo el marco Scrum. Control de usuarios, membresías y horarios.': 'Administrative management system for gyms built with the Scrum framework. User, membership and schedule control.',
-    'Sistema de inventario colaborativo enfocado en la gestión de stock y sincronización de datos con Git.': 'Collaborative inventory system focused on stock management and data synchronization with Git.',
-    'Gestor Cultural': 'Cultural Manager',
-    'Administrador con persistencia en JSON. Implementé manejo avanzado de excepciones y validación de datos técnicos.': 'Manager with JSON persistence. I implemented advanced exception handling and technical data validation.',
 
     /* ----- Contacto ----- */
     'Contacto · María José Montepeque Zet': 'Contact · María José Montepeque Zet',
@@ -135,8 +131,6 @@ export const TRADUCCIONES_EN = {
     'Ver programa': 'View program',
     'Ver plataforma': 'View platform',
     'IA · Python': 'AI · Python',
-    'Sistema de gestión administrativa para gimnasios bajo el marco Scrum: usuarios, membresías y horarios. Scrum Master: organicé el sprint, los eventos y el seguimiento del equipo. El repositorio está en la cuenta de un compañero.': 'Administrative management system for gyms under the Scrum framework: users, memberships and schedules. Scrum Master: I organized the sprint, the events and the team follow-up. The repository is in a teammate\'s account.',
-    'Aplicación de consola en Python para gestionar inventario en memoria. Implementé registro, actualización y depuración de productos, consulta en tiempo real y valoración del stock con precisión de 4 decimales; trabajo en pareja con ramas y pull requests en Git.': 'Python console app to manage in-memory inventory. I implemented registering, updating and removing products, real-time lookup and stock valuation with 4-decimal precision; paired work with branches and pull requests in Git.',
     'Aplicación web para administrar un parqueadero universitario. Diseñé componentes reutilizables con Shadow DOM para la gestión de espacios, el registro de vehículos y el cálculo de tarifas; apliqué control de versiones con Git y un flujo basado en pull requests. Persistencia en <code>localStorage</code>.': 'Web app to run a university parking lot. I designed reusable Shadow DOM components for space management, vehicle registration and fee calculation; I applied version control with Git and a pull-request-based workflow. Persistence in <code>localStorage</code>.',
     'Desarrolladora backend en el equipo de SoftPlus GT. Migré una base de datos legacy a un esquema PostgreSQL con normalización, validaciones y manejo centralizado de errores; configuré el entorno reproducible con Docker Compose y documenté las pruebas de cada servicio en Postman.': 'Backend developer on the SoftPlus GT team. I migrated a legacy database to a PostgreSQL schema with normalization, validations and centralized error handling; I set up the reproducible environment with Docker Compose and documented each service\'s tests in Postman.',
     'Aplicación web para gestionar un parqueadero universitario con login, registro de vehículos con prefijo automático por tipo, cobro por horas de permanencia y reportes de ganancias por vehículo.': 'Web app to manage a university parking lot with login, vehicle registration with an automatic prefix per type, billing by hours parked and earnings reports per vehicle.',
@@ -209,12 +203,8 @@ export const TRADUCCIONES_EN = {
     'Panel de EduTrack con tarjetas de KPIs, una gráfica de progreso por mes y la lista de estudiantes.': 'EduTrack dashboard with KPI cards, a monthly progress chart and the student list.',
     'Cuadrícula de 20 espacios de Campus Parking, con vehículos y sus placas en los espacios ocupados.': 'Campus Parking grid of 20 spaces, with vehicles and their plates in the occupied ones.',
     'Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función asíncrona de reserva.': 'Hotel rooms that are free, occupied or being cleaned, next to an asynchronous booking function.',
-    'Tablero Scrum de ForceTech con las columnas Por hacer, En curso y Hecho.': 'ForceTech Scrum board with To do, In progress and Done columns.',
-    'Consola de Python con el inventario y su valor total, junto a un historial de Git con una rama y un pull request.': 'Python console showing the inventory and its total value, next to a Git history with a branch and a pull request.',
-    'Lista de eventos culturales, un archivo JSON y el manejo de excepciones en Python.': 'List of cultural events, a JSON file and exception handling in Python.',
     'Diseño de APIs REST e integración entre frontend y backend, como en DockerPulse.': 'REST API design and frontend-backend integration, as in DockerPulse.',
     'Identificación de comportamientos fuera de lo normal, aplicada en DockerPulse.': 'Identifying out-of-the-ordinary behavior, applied in DockerPulse.',
-    'Repositorio del equipo': 'Team repository',
     'Página no encontrada': 'Page not found',
     'Esta página no existe': 'This page doesn\'t exist',
     'Puede que el enlace esté mal escrito o que la página se haya movido. Desde el inicio puedes llegar a cualquier sección del portafolio.': 'The link may be misspelled or the page may have moved. From the home page you can reach any section of the portfolio.',
@@ -229,5 +219,6 @@ export const TRADUCCIONES_EN = {
     'Lo estoy aprendiendo y aún no tiene un proyecto propio.': 'I am learning it and it has no project of its own yet.',
     'Evidencia:': 'Evidence:',
     'Sistema Experto': 'Expert System',
-    'Scrum Foundation (SFPC)': 'Scrum Foundation (SFPC)'
+    'Scrum Foundation (SFPC)': 'Scrum Foundation (SFPC)',
+    'Ver demo': 'View demo'
 };
