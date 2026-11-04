@@ -106,10 +106,10 @@ Los colores de los componentes salen siempre de estos tokens, de modo que un tem
 Ambos controles están en la barra de navegación y se guardan en `localStorage`.
 
 - **Tema:** si no hay preferencia guardada, se usa la del sistema (`prefers-color-scheme`); sin JavaScript el sitio se muestra en oscuro.
-- **Idioma:** el español es el contenido original del HTML (así funciona sin JavaScript y se indexa bien). El inglés se aplica desde `js/traducciones.js`, un diccionario cuya clave es el texto en español.
+- **Idioma:** el español es el contenido original del HTML (así funciona sin JavaScript y se indexa bien). El inglés se aplica desde `js/datos/traducciones-en.js`, un diccionario cuya clave es el texto en español.
 
 > [!IMPORTANT]
-> Si cambias un texto en español dentro del HTML, actualiza también su clave en `js/traducciones.js`; de lo contrario, ese texto se quedará en español al cambiar a inglés.
+> Si cambias un texto en español dentro del HTML, actualiza también su clave en `js/datos/traducciones-en.js`; de lo contrario, ese texto se quedará en español al cambiar a inglés.
 
 ---
 
