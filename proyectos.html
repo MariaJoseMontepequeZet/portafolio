@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="imagenes/logo.svg">
     <script src="js/traducciones.js"></script>
     <script src="js/preferencias.js"></script>
+    <script src="js/efectos.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     <header class="navbar">
         <div class="navbar-contenido">
-            <a href="index.html" class="logo">
+            <a href="./" class="logo">
                 <img class="logo-marca" src="imagenes/logo.svg" alt="">
                 <span>María José Montepeque</span>
             </a>
@@ -39,7 +40,7 @@
 
             <nav class="nav-panel" aria-label="Principal">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./">Inicio</a></li>
                     <li><a href="sobremi.html">Sobre mí</a></li>
                     <li><a href="habilidades.html">Habilidades</a></li>
                     <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
@@ -70,18 +71,25 @@
         <div class="encabezado-seccion">
             <span class="etiqueta">Proyectos</span>
             <h1 class="titulo-seccion">Lo que he construido</h1>
-            <p class="subtitulo-seccion">Trabajos académicos y personales donde aplico lógica, desarrollo web,
-                colaboración y persistencia de datos.</p>
+            <p class="subtitulo-seccion">Proyectos académicos y profesionales, con mi rol y las tecnologías aplicadas en cada uno.</p>
         </div>
 
         <div class="grid-proyectos">
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-sistema-experto.png" alt="">
+                <div class="proyecto-portada proyecto-portada-texto" aria-hidden="true"><span>DockerPulse</span></div>
+                <div class="proyecto-cuerpo">
+                    <div class="chips"><span class="chip">Docker</span><span class="chip">IA</span><span class="chip">Frontend</span><span class="chip chip-estado">1.er lugar</span></div>
+                    <h2>DockerPulse — Mantenimiento predictivo con IA</h2>
+                    <p>Hackathon Samsung Innovation Campus 2025 (Centroamérica y el Caribe), en un equipo de 4 personas. Frontend e integración: diseñé el panel de monitoreo en tiempo real de contenedores Docker, con visualización de recursos y control de reinicio manual, y lideré la integración entre frontend y backend y de las APIs de comunicación.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta proyecto">
+                <img class="proyecto-portada" src="imagenes/proyecto-sistema-experto.png" alt="Diagrama del sistema experto de diagnóstico de PC: motor de inferencia, base de reglas en JSON y consola de encadenamiento hacia atrás.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">Python</span><span class="chip">IA</span></div>
                     <h2>Sistema Experto — Diagnóstico de PC</h2>
-                    <p>Sistema experto en Python puro, sin librerías externas. Diagnóstico múltiple, encadenamiento
-                        hacia atrás (<em>backward chaining</em>) y exportación de la base de conocimiento a grafo JSON.
+                    <p>Sistema experto en Python puro, sin librerías externas. Implementé el motor de inferencia (encadenamiento hacia adelante y hacia atrás), la resolución de conflictos por niveles de confianza y la explicación con trazabilidad del razonamiento; la base de conocimiento se exporta a un grafo JSON.
                     </p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/MariaJoseMontepequeZet/Sistema_Experto_MontepequeMaria"
@@ -97,13 +105,12 @@
             </article>
 
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-edutrack.png" alt="">
+                <img class="proyecto-portada" src="imagenes/proyecto-edutrack.png" alt="Panel de EduTrack con módulos de cursos, horarios, estudiantes y reportes, una gráfica de progreso y actividad reciente de alumnos.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span
                             class="chip">CSS3</span></div>
                     <h2>EduTrack</h2>
-                    <p>Panel de gestión educativa para registrar estudiantes, cursos y calificaciones. Interfaz
-                        responsiva con JavaScript vanilla, manipulación del DOM y persistencia en el navegador.</p>
+                    <p>Plataforma de gestión educativa. Construí una SPA sin frameworks con dashboard de KPIs y CRUD de estudiantes con búsqueda multicriterio, filtros y paginación; diseñé un motor de validación con 20 reglas de negocio.</p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/MariaJoseMontepequeZet/EduTrack_MontepequeMariaZetJose.git"
                             target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
@@ -118,12 +125,11 @@
             </article>
 
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-gestion-hotel.png" alt="">
+                <img class="proyecto-portada" src="imagenes/proyecto-gestion-hotel.png" alt="Ficha técnica de Gestión de Hotel: flujo asíncrono con callbacks, modelo de datos de habitaciones y estados de ocupación.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span></div>
                     <h2>Gestión de Hotel</h2>
-                    <p>Sistema de gestión hotelera enfocado en la lógica asíncrona de JavaScript: reservas,
-                        disponibilidad de habitaciones y flujos con promesas y <code>async/await</code>.</p>
+                    <p>Sistema de gestión hotelera centrado en la lógica asíncrona de JavaScript. Implementé reservas, disponibilidad de habitaciones y flujos con promesas y <code>async/await</code>.</p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/MariaJoseMontepequeZet/Gestion_hotel" target="_blank"
                             rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
@@ -138,12 +144,11 @@
             </article>
 
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-forcetech.png" alt="">
+                <img class="proyecto-portada" src="imagenes/proyecto-forcetech.png" alt="Logotipo de ForceTech Intelligent Training: silueta musculosa con un chip en el pecho.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">Python</span><span class="chip">Scrum</span></div>
                     <h2>ForceTech</h2>
-                    <p>Sistema de gestión administrativa para gimnasios bajo el marco Scrum. Control de usuarios,
-                        membresías y horarios.</p>
+                    <p>Sistema de gestión administrativa para gimnasios bajo el marco Scrum: usuarios, membresías y horarios. Scrum Master: organicé el sprint, los eventos y el seguimiento del equipo. El repositorio está en la cuenta de un compañero.</p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/Jose-langL/Sistema_Gimnasio_Force_Tech" target="_blank"
                             rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
@@ -158,15 +163,14 @@
             </article>
 
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-inventory-sync.png" alt="">
+                <img class="proyecto-portada" src="imagenes/proyecto-inventory-sync.png" alt="Logotipo de Inventory Sync: caja con el símbolo de GitHub y circuitos, bajo el lema Python + GitHub colaborativo.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">Python</span><span class="chip">GitHub</span><span
                             class="chip">Colaborativo</span></div>
                     <h2>Inventory Sync</h2>
-                    <p>Sistema de inventario colaborativo enfocado en la gestión de stock y sincronización de datos con
-                        Git.</p>
+                    <p>Aplicación de consola en Python para gestionar inventario en memoria. Implementé registro, actualización y depuración de productos, consulta en tiempo real y valoración del stock con precisión de 4 decimales; trabajo en pareja con ramas y pull requests en Git.</p>
                     <div class="proyecto-acciones">
-                        <a href="https://github.com/MariaJoseMontepequeZet/Inventario_colaborativo_VargasAllison_MontepequeMaria"
+                        <a href="https://github.com/majogt/Inventario_colaborativo_VargasAllison_MontepequeMaria"
                             target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
                             Ver repositorio
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -179,12 +183,11 @@
             </article>
 
             <article class="tarjeta proyecto">
-                <img class="proyecto-portada" src="imagenes/proyecto-gestor-cultural.png" alt="">
+                <img class="proyecto-portada" src="imagenes/proyecto-gestor-cultural.png" alt="Ilustración del repositorio central del Gestor Cultural: logo de Python con datos JSON y la lista de funciones del sistema.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">Python</span><span class="chip">JSON</span></div>
                     <h2>Gestor Cultural</h2>
-                    <p>Administrador con persistencia en JSON. Manejo avanzado de excepciones y validación de datos
-                        técnicos.</p>
+                    <p>Administrador con persistencia en JSON. Implementé manejo avanzado de excepciones y validación de datos técnicos.</p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/MariaJoseMontepequeZet/Taller1_MontepequeMariaZetJose"
                             target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
@@ -197,8 +200,74 @@
                     </div>
                 </div>
             </article>
+            <article class="tarjeta proyecto">
+                <div class="proyecto-portada proyecto-portada-texto" aria-hidden="true"><span>&lt;parking /&gt;</span></div>
+                <div class="proyecto-cuerpo">
+                    <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Web Components</span></div>
+                    <h2>Campus Parking</h2>
+                    <p>Aplicación web para administrar un parqueadero universitario. Diseñé componentes reutilizables con Shadow DOM para la gestión de espacios, el registro de vehículos y el cálculo de tarifas; apliqué control de versiones con Git y un flujo basado en pull requests. Persistencia en <code>localStorage</code>.</p>
+                    <div class="proyecto-acciones">
+                        <a href="https://github.com/MariaJoseMontepequeZet/CampusParking_MariaMontepequeZetJose.git" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
+                            Ver repositorio
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </a>
+                        <button type="button" class="btn btn-primario btn-pequeno" data-detalle="parking">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tarjeta proyecto">
+                <div class="proyecto-portada proyecto-portada-texto" aria-hidden="true"><span>OMS</span></div>
+                <div class="proyecto-cuerpo">
+                    <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Docker Compose</span><span class="chip">Postman</span><span class="chip chip-estado">En desarrollo</span></div>
+                    <h2>OMS Backend — SoftPlus GT</h2>
+                    <p>Desarrolladora backend en el equipo de SoftPlus GT. Migré una base de datos legacy a un esquema PostgreSQL con normalización, validaciones y manejo centralizado de errores; configuré el entorno reproducible con Docker Compose y documenté las pruebas de cada servicio en Postman.</p>
+                    <div class="proyecto-acciones">
+                        <span class="btn btn-secundario btn-pequeno btn-deshabilitado" aria-disabled="true">Repositorio privado</span>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </main>
+
+    <div class="detalle-datos" id="detalle-parking" hidden>
+        <div data-panel="descripcion">
+            <p>Aplicación web para gestionar un parqueadero universitario con login, registro de vehículos con prefijo automático por tipo, cobro por horas de permanencia y reportes de ganancias por vehículo.</p>
+            <p>Reto que resolví: los Web Components usan Shadow DOM y sus eventos no llegaban al listener global. Cambié a <code>window.dispatchEvent()</code> y armé un bus de eventos central en <code>app.js</code>.</p>
+            <p>También incluye validación de placas y espacios duplicados, perfil editable e idioma ES/EN, todo guardado en <code>localStorage</code>.</p>
+        </div>
+        <div data-panel="estructura"><pre>CampusParking/
+├── index.html
+├── css/
+│   └── 9 hojas por componente
+└── js/
+    ├── app.js
+    ├── storage.js
+    ├── i18n.js
+    └── components/
+        ├── LoginPage.js
+        ├── AppNav.js
+        ├── SlotsGrid.js
+        ├── EntryForm.js
+        ├── IncomeReports.js
+        ├── UserProfile.js
+        ├── BillingCard.js
+        └── EditService.js</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>LoginPage</code><span>Autenticación con sesión y opción de recordar credenciales.</span></li>
+            <li><code>AppNav</code><span>Navegación y contadores de vehículos y espacios libres.</span></li>
+            <li><code>SlotsGrid</code><span>Grilla visual de 20 espacios, libres u ocupados.</span></li>
+            <li><code>EntryForm</code><span>Registro y edición con validación de placas.</span></li>
+            <li><code>IncomeReports</code><span>Historial de pagos y totales por tipo de vehículo.</span></li>
+            <li><code>UserProfile</code><span>Perfil editable, cambio de contraseña e idioma.</span></li>
+        </ul></div>
+    </div>
+
+
 
     <footer class="pie-pagina">
         <div class="pie-contenido">
@@ -207,7 +276,7 @@
                 <a href="https://github.com/MariaJoseMontepequeZet" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/mariamontepeque" target="_blank"
                     rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:majomon72@gmail.com">Correo</a>
+                <a href="mailto:majozet8@gmail.com">Correo</a>
             </nav>
         </div>
     </footer>

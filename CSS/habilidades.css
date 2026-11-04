@@ -59,13 +59,3 @@
     font-size: 0.86rem;
     line-height: 1.55;
 }
-
-/* ---------- ESTADO ---------- */
-.chip-estado {
-    padding: 2px 8px;
-    font-size: 0.66rem;
-    font-weight: 600;
-    color: var(--estado-texto);
-    background: var(--estado-fondo);
-    border-color: var(--estado-borde);
-}
