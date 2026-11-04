@@ -188,3 +188,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
+
+.proyecto {
+    scroll-margin-top: 90px;
+}
