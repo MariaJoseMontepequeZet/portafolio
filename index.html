@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="imagenes/logo.svg">
     <script src="js/traducciones.js"></script>
     <script src="js/preferencias.js"></script>
+    <script src="js/efectos.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     <header class="navbar">
         <div class="navbar-contenido">
-            <a href="index.html" class="logo">
+            <a href="./" class="logo">
                 <img class="logo-marca" src="imagenes/logo.svg" alt="">
                 <span>María José Montepeque</span>
             </a>
@@ -39,7 +40,7 @@
 
             <nav class="nav-panel" aria-label="Principal">
                 <ul class="nav-menu">
-                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./" aria-current="page">Inicio</a></li>
                     <li><a href="sobremi.html">Sobre mí</a></li>
                     <li><a href="habilidades.html">Habilidades</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
@@ -69,22 +70,25 @@
     <main id="contenido">
         <section class="seccion hero">
             <div class="hero-texto aparecer">
-                <span class="etiqueta">Desarrolladora Web · Analista SOC</span>
-                <h1 class="hero-titulo">Construyo software <span class="texto-degradado">seguro</span> y funcional.</h1>
-                <p class="hero-descripcion">Soy María José Montepeque Zet, estudiante de Ingeniería en Ciencias y
-                    Sistemas
-                    en la USAC. Combino desarrollo web con operaciones de ciberseguridad para crear soluciones
-                    eficientes y protegidas.</p>
+                <span class="etiqueta">Desarrolladora Full Stack Jr.</span>
+                <h1 class="hero-titulo">Desarrolladora full stack con enfoque en <span class="texto-degradado">ciberseguridad</span>.</h1>
+                <p class="hero-descripcion">Estudiante de Ingeniería en Ciencias y Sistemas en la USAC y del Técnico en Desarrollo de Software (Full Stack) en Campuslands. Desarrollo aplicaciones web y servicios backend con Python, JavaScript y PostgreSQL, y me formo en seguridad y operaciones SOC.</p>
 
                 <div class="hero-acciones">
                     <a href="proyectos.html" class="btn btn-primario">Ver proyectos</a>
                     <a href="contactame.html" class="btn btn-secundario">Contactar</a>
+                    <a href="cv/CV-Maria-Jose-Montepeque.pdf" class="btn btn-secundario" download>Descargar CV</a>
+                </div>
+
+                <div class="terminal" aria-hidden="true">
+                    <div class="terminal-barra"><span></span><span></span><span></span></div>
+                    <p class="terminal-cuerpo" data-terminal>&gt; analizando logs... ✔ sin amenazas</p>
                 </div>
 
                 <ul class="hero-datos">
                     <li><strong>USAC</strong><span>Ing. en Ciencias y Sistemas</span></li>
-                    <li><strong>3</strong><span>Certificaciones</span></li>
-                    <li><strong>6</strong><span>Proyectos</span></li>
+                    <li><a class="dato-enlace" href="sobremi.html#certificaciones"><strong data-contador="3">3</strong><span>Certificaciones</span></a></li>
+                    <li><strong data-contador="9">9</strong><span>Proyectos</span></li>
                 </ul>
             </div>
 
@@ -99,7 +103,7 @@
         <section class="seccion enfoque">
             <div class="encabezado-seccion">
                 <span class="etiqueta">Enfoque</span>
-                <h2 class="titulo-seccion">Donde aporto valor</h2>
+                <h2 class="titulo-seccion">Áreas de trabajo</h2>
             </div>
 
             <div class="grid-3">
@@ -112,7 +116,7 @@
                         </svg>
                     </div>
                     <h3>Ciberseguridad</h3>
-                    <p>Análisis de logs, detección de patrones sospechosos y respuesta ante incidentes con enfoque SOC.
+                    <p>Certificación en Ciberseguridad de IRSI y SISAP (593 h). Fundamentos de SOC y gestión de riesgos de la información.
                     </p>
                 </article>
 
@@ -126,8 +130,7 @@
                         </svg>
                     </div>
                     <h3>Desarrollo web</h3>
-                    <p>Interfaces responsivas y accesibles con HTML, CSS, JavaScript y TypeScript, cuidando semántica y
-                        rendimiento.</p>
+                    <p>Interfaces responsivas con HTML5, CSS3 y JavaScript (ES6+). Construí una SPA sin frameworks con dashboard de KPIs y un sistema con Web Components y Shadow DOM.</p>
                 </article>
 
                 <article class="tarjeta pilar">
@@ -138,8 +141,7 @@
                         </svg>
                     </div>
                     <h3>Backend y datos</h3>
-                    <p>APIs con Strapi, Supabase y Firebase, bases de datos SQL y NoSQL, contenedores con Docker y
-                        despliegue en Netlify.</p>
+                    <p>Desarrollo backend en SoftPlus GT: migración de una base de datos legacy a PostgreSQL con normalización, validaciones y manejo centralizado de errores, en un entorno reproducible con Docker Compose.</p>
                 </article>
             </div>
         </section>
@@ -147,17 +149,13 @@
         <section class="seccion resumen">
             <div class="encabezado-seccion">
                 <span class="etiqueta">Sobre mí</span>
-                <h2 class="titulo-seccion">Tecnología con mentalidad analítica</h2>
+                <h2 class="titulo-seccion">Perfil profesional</h2>
             </div>
 
             <div class="resumen-grid">
-                <p>Me desempeño como programadora y analista de ciberseguridad, combinando habilidades técnicas con una
-                    mentalidad analítica para crear soluciones eficientes y seguras. Disfruto enfrentar retos que
-                    impliquen resolver problemas, optimizar procesos y proteger la información en entornos digitales.
+                <p>Estudiante de Ingeniería en Ciencias y Sistemas. Actualmente me formo como desarrolladora full stack en un programa intensivo y presencial que demanda disciplina diaria.
                 </p>
-                <p>Me interesa aprender y mejorar constantemente, manteniéndome actualizada en nuevas herramientas,
-                    lenguajes y prácticas de seguridad. Me considero una persona comprometida, responsable y orientada
-                    a resultados, capaz de trabajar tanto de forma independiente como en equipo.</p>
+                <p>Mi objetivo es formar parte de una empresa que aspire a mantenerse en la cima: mejorar de forma continua sin sacrificar la calidad ni los logros ya alcanzados.</p>
                 <a href="sobremi.html" class="btn btn-secundario">Conocer más sobre mí</a>
             </div>
         </section>
@@ -170,7 +168,7 @@
                 <a href="https://github.com/MariaJoseMontepequeZet" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/mariamontepeque" target="_blank"
                     rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:majomon72@gmail.com">Correo</a>
+                <a href="mailto:majozet8@gmail.com">Correo</a>
             </nav>
         </div>
     </footer>

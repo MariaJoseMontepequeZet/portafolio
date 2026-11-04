@@ -351,6 +351,16 @@ a {
     letter-spacing: 0.02em;
 }
 
+/* ---------- ESTADO ---------- */
+.chip-estado {
+    padding: 2px 8px;
+    font-size: 0.66rem;
+    font-weight: 600;
+    color: var(--estado-texto);
+    background: var(--estado-fondo);
+    border-color: var(--estado-borde);
+}
+
 .texto-degradado {
     background: var(--degradado);
     -webkit-background-clip: text;
@@ -558,5 +568,127 @@ a {
     .nav-menu a {
         padding: 12px 16px;
         border-radius: var(--radio-sm);
+    }
+}
+/* ---------- FILTRO ---------- */
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.filtro-btn {
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--borde);
+    background: var(--vidrio);
+    color: var(--texto-suave);
+    font-family: var(--fuente-titulos);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.filtro-btn:hover {
+    border-color: var(--borde-activo);
+    color: var(--texto);
+}
+
+.filtro-btn[aria-pressed="true"] {
+    background: var(--primario-suave);
+    border-color: var(--borde-activo);
+    color: var(--texto);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ---------- MOVIMIENTO (solo si el visitante no pidió reducirlo) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+    .revelar {
+        opacity: 0;
+    }
+
+    .revelar.visible {
+        animation: aparecer 0.7s ease var(--retraso, 0ms) both;
+    }
+
+    .filtrado {
+        animation: aparecer 0.45s ease both;
+    }
+
+    /* cambio de tema con transición de colores */
+    .cambiando-tema,
+    .cambiando-tema *,
+    .cambiando-tema *::before,
+    .cambiando-tema *::after {
+        transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease !important;
+    }
+
+    @keyframes girar {
+        from {
+            transform: rotate(-90deg) scale(0.6);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+
+    .pref-btn.girar svg {
+        animation: girar 0.45s ease;
+    }
+
+    /* subrayado que se desliza en la navegación */
+    .nav-menu a {
+        position: relative;
+    }
+
+    .nav-menu a::after {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 4px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--degradado);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a[aria-current="page"]::after {
+        transform: scaleX(1);
+    }
+
+    /* tarjetas de proyecto: zoom suave y chips que brillan */
+    .proyecto-portada {
+        transition: transform 0.6s ease;
+    }
+
+    .proyecto:hover .proyecto-portada {
+        transform: scale(1.05);
+    }
+
+    .chip {
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .tarjeta:hover .chip {
+        border-color: var(--borde-activo);
+        box-shadow: 0 0 12px rgba(var(--primario-rgb), 0.35);
+    }
+
+    .pilar:hover .pilar-icono {
+        transform: rotate(-6deg) scale(1.08);
+    }
+
+    .pilar-icono {
+        transition: transform 0.3s ease;
     }
 }
