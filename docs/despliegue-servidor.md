@@ -79,7 +79,37 @@ No hace falta tocar `docker-compose.yml` ni reiniciar el contenedor: nginx sirve
 2. Cuando `develop` esté listo, abre un pull request de `develop` a `main`.
 3. Al hacer el merge, el sitio se actualiza solo. No hay que tocar el servidor.
 
-Los cambios en `docker-compose.yml` o en la configuración de nginx **no** son automáticos.
+Los cambios en `docker-compose.yml` o en la configuración de nginx **no** son automáticos (ver más abajo).
+
+## Configuración de nginx (cabeceras de seguridad y página 404)
+
+La configuración de nginx vive en el servidor (`~/portafolio/nginx.conf`) y se guarda en el repositorio como referencia en [`servidor/nginx.conf`](../servidor/nginx.conf). Incluye: cabeceras de seguridad (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy y Permissions-Policy), la versión de nginx oculta, la página `404.html` propia y `Cache-Control: no-cache`.
+
+El despliegue automático **no** copia ese archivo. Cuando cambie, se actualiza a mano en el servidor:
+
+1. Copia el contenido de `servidor/nginx.conf` y reemplaza el archivo del servidor:
+   ```bash
+   cat > ~/portafolio/nginx.conf <<'EOF'
+   (pega aquí el contenido de servidor/nginx.conf)
+   EOF
+   ```
+2. Comprueba la sintaxis y recarga nginx sin reiniciar el contenedor:
+   ```bash
+   docker exec portafolio-web nginx -t && docker exec portafolio-web nginx -s reload
+   ```
+3. Verifica las cabeceras y el 404:
+   ```bash
+   curl -sI http://localhost:5000/ | grep -i -E "content-security|x-frame|x-content|referrer|strict-transport|cache-control|server"
+   curl -s -o /dev/null -w "%{http_code}\n" http://localhost:5000/no-existe
+   ```
+
+Si cambias la política de contenido (por ejemplo, para permitir un recurso externo nuevo), edítala en este archivo.
+
+## Cloudflare
+
+- **Regla de caché solo para este sitio:** en **Caching → Cache Rules**, crea una regla con *Hostname equals* `portafoliomariajosemontepequezet.pamcing.me` y la acción **Bypass cache**. Sin ella, Cloudflare guarda estilos, scripts e imágenes por 4 horas y pisa el `no-cache` de nginx.
+- **Purgar la caché** (Caching → Configuration → Custom Purge → Hostname) después de un cambio grande, si ves algo viejo.
+- **HSTS:** nginx ya envía `Strict-Transport-Security`. Si prefieres administrarlo en Cloudflare (SSL/TLS → Edge Certificates → HSTS), quita esa línea de `nginx.conf` para no duplicarla.
 
 ## Si algo falla
 
