@@ -48,7 +48,7 @@ Portafolio estático construido con HTML, CSS y una pizca de JavaScript, sin fra
 |---|---|
 | **Inicio** | Presentación, enfoque profesional y resumen personal. |
 | **Sobre mí** | Cuatro tarjetas con quién soy, gustos, formación e intereses IT. |
-| **Habilidades** | Stack técnico agrupado por categorías: desarrollo, backend, bases de datos, DevOps, IA y herramientas. |
+| **Habilidades** | Stack técnico agrupado por nivel (sólido, intermedio, básico), con la evidencia de cada una: los proyectos y certificaciones que la respaldan. |
 | **Proyectos** | Listado de proyectos con etiquetas de tecnologías y enlace a cada repositorio. |
 | **Contacto** | Enlaces a LinkedIn, GitHub y correo. |
 
