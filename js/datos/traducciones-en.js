@@ -253,5 +253,8 @@ export const TRADUCCIONES_EN = {
     'Cambia el estado de una habitación: Libre, Ocupada o Limpieza.': 'Changes the status of a room: Free, Occupied or Cleaning.',
     'Listan los registros y eliminan uno.': 'List the records and delete one.',
     'Sistema de gestión hotelera en memoria, centrado en la asincronía clásica de JavaScript. Implementé el registro, la búsqueda y el cambio de estado de habitaciones con callbacks y recursividad asíncrona (setTimeout), con precios a 4 decimales.': 'In-memory hotel management system, focused on classic JavaScript asynchrony. I implemented room registration, search and status changes with callbacks and asynchronous recursion (setTimeout), with prices to 4 decimals.',
-    'Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función con callback y setTimeout.': 'Hotel rooms that are free, occupied or being cleaned, next to a function with a callback and setTimeout.'
+    'Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función con callback y setTimeout.': 'Hotel rooms that are free, occupied or being cleaned, next to a function with a callback and setTimeout.',
+    '¿No se abrió tu programa de correo?': 'Didn\'t your email app open?',
+    'Escríbeme desde Gmail': 'Write to me from Gmail',
+    'o usa «Copiar correo».': 'or use "Copy email".'
 };
