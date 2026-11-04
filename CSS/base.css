@@ -14,7 +14,7 @@
     --acento-rgb: 99, 102, 241;
     --primario-suave: rgba(var(--primario-rgb), 0.12);
     --borde-activo: rgba(var(--primario-rgb), 0.5);
-    --degradado: linear-gradient(135deg, var(--primario) 0%, var(--acento) 100%);
+    --degradado: linear-gradient(135deg, var(--primario) 0%, var(--celeste) 100%);
 
     --texto: #f4f4fb;
     --texto-suave: #a6a6c1;
@@ -31,6 +31,26 @@
     --estado-fondo: rgba(251, 191, 36, 0.12);
     --estado-borde: rgba(251, 191, 36, 0.3);
 
+
+    /* paleta: morado, celeste, menta, coral, rojo, beige, gris y negro */
+    --celeste: #38bdf8;
+    --celeste-rgb: 56, 189, 248;
+    --celeste-texto: #7dd3fc;
+    --menta: #6ee7b7;
+    --menta-rgb: 110, 231, 183;
+    --menta-texto: #86efc4;
+    --coral: #ff7a6b;
+    --coral-rgb: 255, 122, 107;
+    --coral-texto: #ffa194;
+    --rojo: #f87171;
+    --rojo-rgb: 248, 113, 113;
+    --beige: #e9dfcf;
+    --gris: #8a8aa3;
+    --tinta: #14121f;
+    --degradado-btn: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    --degradado-texto: linear-gradient(90deg, #a78bfa, #38bdf8);
+    --aurora-opacidad: 0.3;
+
     --fuente-titulos: 'Space Grotesk', sans-serif;
     --fuente-cuerpo: 'Inter', sans-serif;
 
@@ -43,10 +63,10 @@
 :root[data-theme="light"] {
     color-scheme: light;
 
-    --fondo: #f6f5fc;
-    --superficie: #ffffff;
-    --superficie-2: #efedfa;
-    --borde: rgba(23, 22, 43, 0.12);
+    --fondo: #f7f1e6;
+    --superficie: #fffdf8;
+    --superficie-2: #efe6d6;
+    --borde: rgba(23, 22, 43, 0.13);
 
     --primario: #6d28d9;
     --primario-rgb: 109, 40, 217;
@@ -54,20 +74,38 @@
     --acento-rgb: 79, 70, 229;
 
     --texto: #17162b;
-    --texto-suave: #4b4a68;
+    --texto-suave: #45445f;
     --texto-tenue: #66657f;
 
-    --vidrio: rgba(23, 22, 43, 0.03);
-    --vidrio-hover: rgba(23, 22, 43, 0.06);
+    --vidrio: rgba(23, 22, 43, 0.035);
+    --vidrio-hover: rgba(23, 22, 43, 0.07);
     --codigo-fondo: rgba(23, 22, 43, 0.07);
-    --nav-fondo: rgba(246, 245, 252, 0.8);
-    --nav-fondo-panel: rgba(246, 245, 252, 0.98);
+    --nav-fondo: rgba(247, 241, 230, 0.82);
+    --nav-fondo-panel: rgba(247, 241, 230, 0.98);
     --chip-texto: #5b21b6;
-    --sombra-flotante: 0 10px 30px rgba(23, 22, 43, 0.15);
+    --sombra-flotante: 0 12px 32px rgba(23, 22, 43, 0.16);
     --estado-texto: #92400e;
     --estado-fondo: rgba(217, 119, 6, 0.12);
     --estado-borde: rgba(217, 119, 6, 0.35);
-    --sombra-glow: 0 12px 40px rgba(var(--primario-rgb), 0.14);
+    --sombra-glow: 0 14px 40px rgba(var(--primario-rgb), 0.16);
+
+    --celeste: #0284c7;
+    --celeste-rgb: 2, 132, 199;
+    --celeste-texto: #0369a1;
+    --menta: #10b981;
+    --menta-rgb: 16, 185, 129;
+    --menta-texto: #047857;
+    --coral: #f0654f;
+    --coral-rgb: 240, 101, 79;
+    --coral-texto: #b4381f;
+    --rojo: #dc2626;
+    --rojo-rgb: 220, 38, 38;
+    --beige: #f7f1e6;
+    --gris: #6b6a80;
+    --tinta: #17162b;
+    --degradado-btn: linear-gradient(135deg, #6d28d9 0%, #4f46e5 100%);
+    --degradado-texto: linear-gradient(90deg, #6d28d9, #0284c7);
+    --aurora-opacidad: 0.4;
 }
 
 /* ---------- BASE ---------- */
@@ -91,7 +129,8 @@ body {
     color: var(--texto);
     background:
         radial-gradient(60% 45% at 85% -5%, rgba(var(--primario-rgb), 0.16), transparent 70%),
-        radial-gradient(45% 35% at -5% 100%, rgba(var(--acento-rgb), 0.1), transparent 70%),
+        radial-gradient(45% 35% at -5% 100%, rgba(var(--celeste-rgb), 0.12), transparent 70%),
+        radial-gradient(35% 30% at 105% 105%, rgba(var(--coral-rgb), 0.1), transparent 70%),
         var(--fondo);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -300,7 +339,7 @@ a {
 }
 
 .btn-primario {
-    background: var(--degradado);
+    background: var(--degradado-btn);
     color: #fff;
     box-shadow: 0 8px 24px rgba(var(--primario-rgb), 0.3);
 }
@@ -690,5 +729,209 @@ a {
 
     .pilar-icono {
         transition: transform 0.3s ease;
+    }
+}
+
+/* ---------- PALETA: acento morado, estados en coral ---------- */
+.chip {
+    background: rgba(var(--primario-rgb), 0.1);
+    border-color: rgba(var(--primario-rgb), 0.25);
+    color: var(--chip-texto);
+}
+
+.chip-estado {
+    background: rgba(var(--coral-rgb), 0.12);
+    border-color: rgba(var(--coral-rgb), 0.35);
+    color: var(--coral-texto);
+}
+
+/* superficies de código siempre oscuras: menta sobre tinta */
+.terminal,
+:root .terminal,
+:root .detalle-cuerpo pre {
+    background: var(--tinta);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.terminal-cuerpo,
+:root[data-theme="light"] .terminal-cuerpo,
+.detalle-cuerpo pre,
+:root[data-theme="light"] .detalle-cuerpo pre {
+    color: #6ee7b7;
+}
+
+.terminal-barra,
+:root .terminal-barra {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.terminal-barra span,
+:root .terminal-barra span {
+    opacity: 1;
+}
+
+:root .terminal-barra span:nth-child(1) {
+    background: #f87171;
+}
+
+:root .terminal-barra span:nth-child(2) {
+    background: #ff9a5c;
+}
+
+:root .terminal-barra span:nth-child(3) {
+    background: #6ee7b7;
+}
+
+/* tema claro: tarjetas con sombra suave y botones con tinta */
+:root[data-theme="light"] .tarjeta {
+    box-shadow: 0 1px 2px rgba(23, 22, 43, 0.05), 0 8px 24px rgba(23, 22, 43, 0.05);
+}
+
+:root[data-theme="light"] .tarjeta:hover {
+    box-shadow: var(--sombra-glow);
+}
+
+:root[data-theme="light"] .btn-secundario {
+    border: 1.5px solid rgba(23, 22, 43, 0.4);
+}
+
+:root[data-theme="light"] .btn-secundario:hover {
+    background: var(--tinta);
+    border-color: var(--tinta);
+    color: var(--beige);
+}
+
+:root[data-theme="light"] .nav-menu a[aria-current="page"] {
+    background: rgba(var(--primario-rgb), 0.12);
+}
+
+:root[data-theme="light"] .filtro-btn[aria-pressed="true"] {
+    background: var(--tinta);
+    border-color: var(--tinta);
+    color: var(--beige);
+}
+
+/* ---------- ANIMACIONES LLAMATIVAS Y SUTILES ---------- */
+.hero-marco,
+:root .hero-marco {
+    padding: 8px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra-flotante);
+}
+
+:root .hero-marco img {
+    border-radius: 20px;
+}
+
+.texto-degradado {
+    background-image: var(--degradado-texto);
+    background-size: 100% 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+    /* aurora: manchas de color que derivan despacio detrás del contenido */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: -15%;
+        z-index: -1;
+        pointer-events: none;
+        opacity: var(--aurora-opacidad);
+        background:
+            radial-gradient(30% 30% at 20% 25%, rgba(var(--celeste-rgb), 0.22), transparent 70%),
+            radial-gradient(28% 28% at 80% 20%, rgba(var(--primario-rgb), 0.22), transparent 70%),
+            radial-gradient(30% 30% at 70% 85%, rgba(var(--coral-rgb), 0.16), transparent 70%),
+            radial-gradient(25% 25% at 15% 80%, rgba(var(--menta-rgb), 0.16), transparent 70%);
+        filter: blur(30px);
+        animation: aurora 26s ease-in-out infinite alternate;
+    }
+
+    @keyframes aurora {
+        from {
+            transform: translate3d(-2%, -1%, 0) scale(1);
+        }
+
+        to {
+            transform: translate3d(3%, 2%, 0) scale(1.08);
+        }
+    }
+
+    /* insignia que flota */
+    .hero-insignia {
+        animation: flotar 4.5s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+
+        0%,
+        100% {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(-5px);
+        }
+    }
+
+    /* destello al pasar sobre el botón principal */
+    .btn-primario {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-primario::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -80%;
+        width: 50%;
+        background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+        transform: skewX(-20deg);
+        pointer-events: none;
+    }
+
+    .btn-primario:hover::after {
+        left: 130%;
+        transition: left 0.7s ease;
+    }
+
+    /* foco de luz que sigue al cursor sobre las tarjetas */
+    .tarjeta {
+        position: relative;
+    }
+
+    .tarjeta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0;
+        background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--primario-rgb), 0.13), rgba(var(--celeste-rgb), 0.06) 45%, transparent 70%);
+        transition: opacity 0.3s ease;
+    }
+
+    .tarjeta:hover::after {
+        opacity: 1;
+    }
+
+    /* los puntos de la línea de tiempo y de los grupos laten */
+    .hito::before {
+        animation: latido 3.2s ease-in-out infinite;
+    }
+
+    @keyframes latido {
+
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(var(--primario-rgb), 0.35);
+        }
+
+        50% {
+            box-shadow: 0 0 0 7px rgba(var(--primario-rgb), 0);
+        }
     }
 }

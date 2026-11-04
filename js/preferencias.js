@@ -6,7 +6,7 @@
 (function () {
     var raiz = document.documentElement;
     var EN = window.TRADUCCIONES_EN || {};
-    var META_COLOR = { dark: '#0b0a14', light: '#f6f5fc' };
+    var META_COLOR = { dark: '#0b0a14', light: '#f7f1e6' };
     var UI = {
         es: { idioma: 'Cambiar a inglés', tema: { dark: 'Cambiar a tema claro', light: 'Cambiar a tema oscuro' } },
         en: { idioma: 'Switch to Spanish', tema: { dark: 'Switch to light theme', light: 'Switch to dark theme' } }
