@@ -220,5 +220,14 @@ export const TRADUCCIONES_EN = {
     'Puede que el enlace esté mal escrito o que la página se haya movido. Desde el inicio puedes llegar a cualquier sección del portafolio.': 'The link may be misspelled or the page may have moved. From the home page you can reach any section of the portfolio.',
     'Volver al inicio': 'Back to home',
     '404 · Página no encontrada': '404 · Page not found',
-    'La página que buscas no existe en el portafolio de María José Montepeque Zet.': 'The page you are looking for does not exist in María José Montepeque Zet\'s portfolio.'
+    'La página que buscas no existe en el portafolio de María José Montepeque Zet.': 'The page you are looking for does not exist in María José Montepeque Zet\'s portfolio.',
+    'Sólido': 'Solid',
+    'Lo respaldan dos o más proyectos o certificaciones.': 'Backed by two or more projects or certifications.',
+    'Intermedio': 'Intermediate',
+    'Lo respalda un proyecto o una certificación.': 'Backed by one project or certification.',
+    'Básico y en aprendizaje': 'Basic and learning',
+    'Lo estoy aprendiendo y aún no tiene un proyecto propio.': 'I am learning it and it has no project of its own yet.',
+    'Evidencia:': 'Evidence:',
+    'Sistema Experto': 'Expert System',
+    'Scrum Foundation (SFPC)': 'Scrum Foundation (SFPC)'
 };
