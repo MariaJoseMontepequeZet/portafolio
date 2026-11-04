@@ -11,6 +11,7 @@ import { AparicionAlScroll } from './efectos/AparicionAlScroll.js';
 import { ContadoresAnimados } from './efectos/ContadoresAnimados.js';
 import { CopiarCorreo } from './efectos/CopiarCorreo.js';
 import { DetalleProyecto } from './efectos/DetalleProyecto.js';
+import { EscribirCorreo } from './efectos/EscribirCorreo.js';
 import { FiltroProyectos } from './efectos/FiltroProyectos.js';
 import { FocoTarjetas } from './efectos/FocoTarjetas.js';
 import { LineaTiempo } from './efectos/LineaTiempo.js';
@@ -50,6 +51,7 @@ function iniciar() {
         new TerminalHero(contexto),
         new FiltroProyectos(contexto),
         new CopiarCorreo(contexto),
+        new EscribirCorreo(contexto),
         new DetalleProyecto(contexto),
         new LineaTiempo(contexto),
         new FocoTarjetas(contexto),
