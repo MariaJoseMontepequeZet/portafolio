@@ -23,6 +23,8 @@ Sitio web personal para presentar mi trayectoria académica, habilidades técnic
 - [🛠️ Tecnologías](#️-tecnologías)
 - [🎨 Sistema de estilos](#-sistema-de-estilos)
 - [🌗 Tema e idioma](#-tema-e-idioma)
+- [🧱 Arquitectura: POO y SOLID](#-arquitectura-poo-y-solid)
+- [🔒 Seguridad y SEO](#-seguridad-y-seo)
 - [⚙️ Cómo ejecutarlo](#️-cómo-ejecutarlo)
 - [📂 Estructura del proyecto](#-estructura-del-proyecto)
 - [🌿 Flujo de trabajo](#-flujo-de-trabajo)
@@ -64,7 +66,7 @@ Portafolio estático construido con HTML, CSS y una pizca de JavaScript, sin fra
 
 - **HTML5** — estructura semántica (`main`, `article`, `nav`, `footer`).
 - **CSS3** — variables personalizadas, Flexbox, Grid y animaciones.
-- **JavaScript** — solo para el cambio de tema e idioma (`js/`).
+- **JavaScript** — módulos ES y clases (POO), para las preferencias de tema e idioma y los efectos de la interfaz (`js/`).
 - **Google Fonts** — Inter y Space Grotesk.
 - **SVG** — iconografía vectorial.
 
@@ -111,6 +113,52 @@ Ambos controles están en la barra de navegación y se guardan en `localStorage`
 
 ---
 
+## 🧱 Arquitectura: POO y SOLID
+
+El JavaScript está escrito con **clases y módulos ES**. Cada clase tiene una sola responsabilidad y recibe lo que necesita por el constructor; solo `main.js` conoce las clases concretas y las conecta.
+
+```text
+main.js ──▶ crea AlmacenLocal, PreferenciaMovimiento, Tema, Idioma, Traductor
+        └─▶ crea los efectos con un «contexto» { documento, movimiento, idioma }
+```
+
+**Programación orientada a objetos**
+
+| Concepto | Dónde verlo |
+|---|---|
+| **Encapsulamiento** | Atributos privados (`#`) en todas las clases: `Tema.#actual`, `Idioma.#observadores`, `AlmacenLocal.#almacen`... Solo se exponen getters y métodos. |
+| **Abstracción y clase abstracta** | `Efecto` y `Traducible` no se pueden instanciar (`new.target`); definen el contrato que cumplen sus hijas. |
+| **Herencia** | 9 efectos extienden `Efecto` (`AparicionAlScroll`, `TerminalHero`, `FiltroProyectos`...). 4 clases extienden `Traducible` (`TextoDeNodo`, `HtmlDeElemento`, `AtributoDeElemento`, `TituloDelDocumento`). |
+| **Polimorfismo** | `Traductor` llama `aplicar()` a cualquier `Traducible` sin saber su tipo, y `main.js` llama `arrancar()` a cualquier `Efecto`; cada hija responde a su manera. |
+| **Método plantilla** | `Efecto.arrancar()` pregunta `aplica()` y luego llama `iniciar()`; las hijas solo sobrescriben esos dos. |
+| **Patrón observador** | `Tema.alCambiar()` e `Idioma.alCambiar()` avisan a quien se suscriba (botones, traductor, terminal, filtro). |
+
+**Principios SOLID**
+
+| Principio | Cómo se cumple |
+|---|---|
+| **S** · Responsabilidad única | `Tema` solo gestiona el tema; `Idioma` solo el idioma; `Traductor` solo escribe textos; `ControlesPreferencias` solo conecta los botones; cada efecto hace una sola cosa. |
+| **O** · Abierto/cerrado | Un efecto nuevo es una clase nueva (hija de `Efecto`) y una línea en la lista de `main.js`; no se toca ninguna otra clase. Un destino de traducción nuevo es otra hija de `Traducible`. |
+| **L** · Sustitución de Liskov | Cualquier `Efecto` puede ocupar el lugar de otro en la lista, y cualquier `Traducible` en el del suyo: ninguna hija rompe el contrato de su base. |
+| **I** · Segregación de interfaces | Las clases exponen interfaces pequeñas: los efectos solo ven `documento`, `movimiento` e `idioma`; el idioma solo ofrece `actual`, `esIngles` y `alCambiar()`. |
+| **D** · Inversión de dependencias | Nada busca globales por su cuenta: el almacén, el documento, el diccionario y el idioma se **inyectan** por el constructor. Por eso las pruebas usan objetos falsos en lugar del navegador. |
+
+Las **26 pruebas** (`npm test`) cubren el almacén, el tema, el idioma, el traductor, la jerarquía `Traducible`, la clase abstracta `Efecto` y los efectos de scroll, todo sin abrir un navegador.
+
+> [!NOTE]
+> `js/tema-inicial.js` es lo único que no está en un módulo: los módulos se ejecutan diferidos, y el tema debe aplicarse antes del primer pintado para evitar un parpadeo. Repite a propósito un par de líneas de `Tema`.
+
+---
+
+## 🔒 Seguridad y SEO
+
+- **Cabeceras de seguridad** (en `servidor/nginx.conf`): `Content-Security-Policy`, `Strict-Transport-Security`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy` y `Permissions-Policy`. Por eso el código no usa estilos ni scripts en línea.
+- **Página 404 propia** (`404.html`) y sin versión del servidor a la vista.
+- **Open Graph y Twitter Card** en todas las páginas, con una imagen de 1200×630 (`imagenes/og.jpg`), para que el enlace se vea bien en LinkedIn y WhatsApp. Si cambias la imagen, sube el número de `?v=1` en las etiquetas `og:image`.
+- `sitemap.xml`, `robots.txt` y URL canónica en cada página.
+
+---
+
 ## ⚙️ Cómo ejecutarlo
 
 **Requisitos:** un navegador moderno. Para editar, se recomienda Visual Studio Code.
@@ -120,9 +168,14 @@ Ambos controles están en la barra de navegación y se guardan en `localStorage`
    git clone https://github.com/MariaJoseMontepequeZet/Portafolio.git
    cd Portafolio
    ```
-2. Abre `index.html` en el navegador, o sirve la carpeta con cualquier servidor estático:
+2. Sirve la carpeta con cualquier servidor estático (los módulos ES no funcionan abriendo el archivo con doble clic):
    ```bash
    python -m http.server 8000
+   ```
+   y abre http://localhost:8000.
+3. Para correr las pruebas (necesitan Node.js 20 o superior, sin instalar nada más):
+   ```bash
+   npm test
    ```
 
 ---
@@ -131,18 +184,23 @@ Ambos controles están en la barra de navegación y se guardan en `localStorage`
 
 ```text
 Portafolio/
-├── index.html
-├── sobremi.html
-├── habilidades.html
-├── proyectos.html
-├── contactame.html
+├── index.html, sobremi.html, habilidades.html, proyectos.html, contactame.html
+├── 404.html              # página de error con el diseño del sitio
+├── sitemap.xml, robots.txt
 ├── CSS/
 │   ├── base.css          # tokens, layout, navbar y componentes
 │   └── *.css             # una hoja por página
 ├── js/
-│   ├── preferencias.js   # tema e idioma
-│   └── traducciones.js   # diccionario español → inglés
-└── imagenes/             # logo, ilustraciones, proyectos e iconos de habilidades
+│   ├── tema-inicial.js   # aplica el tema antes del primer pintado (evita el parpadeo)
+│   ├── main.js           # raíz de composición: crea los objetos y los conecta
+│   ├── nucleo/           # AlmacenLocal, PreferenciaMovimiento
+│   ├── preferencias/     # Tema, Idioma, Traductor, Traducible, ControlesPreferencias
+│   ├── efectos/          # Efecto (abstracta) y sus 9 hijas
+│   └── datos/            # traducciones-en.js (diccionario español → inglés)
+├── tests/                # pruebas con node:test
+├── servidor/nginx.conf   # configuración de nginx del servidor (referencia)
+├── docs/                 # guía de despliegue
+└── imagenes/             # logo, fotos, portadas, iconos de habilidades e imagen para compartir (og.jpg)
 ```
 
 > Los nombres de archivo en `imagenes/` van en minúsculas: los servidores Linux (Netlify, GitHub Pages) distinguen mayúsculas.

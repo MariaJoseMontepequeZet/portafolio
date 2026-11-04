@@ -1,0 +1,32 @@
+/* ---------- PÁGINA 404 ---------- */
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.error-codigo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(5rem, 18vw, 10rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: var(--degradado-texto);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 16px;
+}
+
+.error .subtitulo-seccion {
+    max-width: 52ch;
+}
+
+.error-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
