@@ -20,8 +20,8 @@ export const TRADUCCIONES_EN = {
     'Ver repositorio': 'View repository',
 
     /* ----- Inicio ----- */
-    'María José Montepeque Zet · Desarrolladora Web y Analista SOC': 'María José Montepeque Zet · Web Developer & SOC Analyst',
-    'Portafolio de María José Montepeque Zet, desarrolladora web y analista SOC. Estudiante de Ingeniería en Ciencias y Sistemas en la USAC.': 'Portfolio of María José Montepeque Zet, web developer and SOC analyst. Computer Science and Systems Engineering student at USAC.',
+    'María José Montepeque Zet · Desarrolladora Full Stack Jr.': 'María José Montepeque Zet · Junior Full Stack Developer',
+    'Portafolio de María José Montepeque Zet, desarrolladora full stack junior con enfoque en ciberseguridad. Estudiante de Ingeniería en Ciencias y Sistemas en la USAC.': 'Portfolio of María José Montepeque Zet, junior full stack developer with a focus on cybersecurity. Computer Science and Systems Engineering student at USAC.',
     'Desarrolladora Full Stack Jr.': 'Junior Full Stack Developer',
     'Desarrolladora full stack con enfoque en <span class="texto-degradado">ciberseguridad</span>.': 'Full stack developer with a focus on <span class="texto-degradado">cybersecurity</span>.',
     'Estudiante de Ingeniería en Ciencias y Sistemas en la USAC y del Técnico en Desarrollo de Software (Full Stack) en Campuslands. Desarrollo aplicaciones web y servicios backend con Python, JavaScript y PostgreSQL, y me formo en seguridad y operaciones SOC.': 'Computer Science and Systems Engineering student at USAC and in the Software Development Technician (Full Stack) program at Campuslands. I develop web applications and backend services with Python, JavaScript and PostgreSQL, and I\'m training in security and SOC operations.',
@@ -29,7 +29,7 @@ export const TRADUCCIONES_EN = {
     'Contactar': 'Get in touch',
     'Ing. en Ciencias y Sistemas': 'Computer Science & Systems Eng.',
     'Certificaciones': 'Certifications',
-    'Ilustración de María José Montepeque Zet': 'Illustration of María José Montepeque Zet',
+    'Foto de María José Montepeque Zet': 'Photo of María José Montepeque Zet',
     'Disponible para colaborar': 'Available to collaborate',
     'Enfoque': 'Focus',
     'Áreas de trabajo': 'Areas of work',
@@ -213,5 +213,12 @@ export const TRADUCCIONES_EN = {
     'Consola de Python con el inventario y su valor total, junto a un historial de Git con una rama y un pull request.': 'Python console showing the inventory and its total value, next to a Git history with a branch and a pull request.',
     'Lista de eventos culturales, un archivo JSON y el manejo de excepciones en Python.': 'List of cultural events, a JSON file and exception handling in Python.',
     'Diseño de APIs REST e integración entre frontend y backend, como en DockerPulse.': 'REST API design and frontend-backend integration, as in DockerPulse.',
-    'Identificación de comportamientos fuera de lo normal, aplicada en DockerPulse.': 'Identifying out-of-the-ordinary behavior, applied in DockerPulse.'
+    'Identificación de comportamientos fuera de lo normal, aplicada en DockerPulse.': 'Identifying out-of-the-ordinary behavior, applied in DockerPulse.',
+    'Repositorio del equipo': 'Team repository',
+    'Página no encontrada': 'Page not found',
+    'Esta página no existe': 'This page doesn\'t exist',
+    'Puede que el enlace esté mal escrito o que la página se haya movido. Desde el inicio puedes llegar a cualquier sección del portafolio.': 'The link may be misspelled or the page may have moved. From the home page you can reach any section of the portfolio.',
+    'Volver al inicio': 'Back to home',
+    '404 · Página no encontrada': '404 · Page not found',
+    'La página que buscas no existe en el portafolio de María José Montepeque Zet.': 'The page you are looking for does not exist in María José Montepeque Zet\'s portfolio.'
 };
