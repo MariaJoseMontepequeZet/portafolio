@@ -96,6 +96,7 @@
                     <p>Desarrolladora backend en el equipo de SoftPlus GT. Migré una base de datos legacy a un esquema PostgreSQL con normalización, validaciones y manejo centralizado de errores; configuré el entorno reproducible con Docker Compose y documenté las pruebas de cada servicio en Postman.</p>
                     <div class="proyecto-acciones">
                         <span class="btn btn-secundario btn-pequeno btn-deshabilitado" aria-disabled="true">Repositorio privado</span>
+                        <button type="button" class="btn btn-primario btn-pequeno" data-detalle="oms">Ver detalle</button>
                     </div>
                 </div>
             </article>
@@ -118,6 +119,7 @@
                             </svg>
                         </a>
                         <a href="https://diagnostico-pc-sistema-experto.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
+                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="sistema-experto">Ver detalle</button>
                     </div>
                 </div>
             </article>
@@ -140,6 +142,7 @@
                             </svg>
                         </a>
                         <a href="https://mariajosemontepequezet.github.io/edutrack_maria-montepeque/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
+                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="edutrack">Ver detalle</button>
                     </div>
                 </div>
             </article>
@@ -165,12 +168,12 @@
             </article>
 
             <article class="tarjeta proyecto" id="hotel">
-                <img class="proyecto-portada" src="imagenes/proyecto-hotel.svg" alt="Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función asíncrona de reserva.">
+                <img class="proyecto-portada" src="imagenes/proyecto-hotel.svg" alt="Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función con callback y setTimeout.">
                 <div class="proyecto-cuerpo">
                     <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span></div>
                     <time class="proyecto-fecha">Abril 2026</time>
                     <h2>Gestión de Hotel</h2>
-                    <p>Sistema de gestión hotelera centrado en la lógica asíncrona de JavaScript. Implementé reservas, disponibilidad de habitaciones y flujos con promesas y <code>async/await</code>.</p>
+                    <p>Sistema de gestión hotelera en memoria, centrado en la asincronía clásica de JavaScript. Implementé el registro, la búsqueda y el cambio de estado de habitaciones con callbacks y recursividad asíncrona (setTimeout), con precios a 4 decimales.</p>
                     <div class="proyecto-acciones">
                         <a href="https://github.com/MariaJoseMontepequeZet/Gestion_hotel" target="_blank"
                             rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
@@ -180,6 +183,7 @@
                                 <path d="M7 17L17 7M8 7h9v9" />
                             </svg>
                         </a>
+                        <button type="button" class="btn btn-primario btn-pequeno" data-detalle="hotel">Ver detalle</button>
                     </div>
                 </div>
             </article>
@@ -221,6 +225,106 @@
     </div>
 
 
+
+    <div class="detalle-datos" id="detalle-oms" hidden>
+        <div data-panel="descripcion">
+            <p>Sistema de gestión de órdenes que desarrollo como backend en el equipo de SoftPlus GT. Está en desarrollo y su repositorio es privado.</p>
+            <p>Migré una base de datos legacy a un esquema PostgreSQL, con normalización de datos para la segmentación de bloques, validaciones y manejo centralizado de errores.</p>
+            <p>El entorno es reproducible con Docker Compose y las pruebas de cada servicio están documentadas en Postman. Puedo explicar el diseño del código en una entrevista.</p>
+        </div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>PostgreSQL</code><span>Esquema normalizado al que se migró la base legacy.</span></li>
+            <li><code>Validaciones</code><span>Reglas que revisan los datos antes de guardarlos.</span></li>
+            <li><code>Manejo de errores</code><span>Centralizado: un solo punto decide cómo responder a cada fallo.</span></li>
+            <li><code>Docker Compose</code><span>Entorno reproducible para levantar los servicios.</span></li>
+            <li><code>Postman</code><span>Pruebas documentadas de cada servicio.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-sistema-experto" hidden>
+        <div data-panel="descripcion">
+            <p>Sistema experto basado en reglas que imita el razonamiento de un técnico de soporte. Separa el conocimiento, escrito en un archivo JSON que se puede editar sin programar, del motor de inferencia que lo aplica.</p>
+            <p>Solo pregunta lo que sirve para las hipótesis que siguen abiertas, y explica por qué llegó a cada diagnóstico, con el diagrama de su razonamiento.</p>
+            <p>Cubre 21 diagnósticos y se evalúa con 42 casos de referencia en cada cambio: la integración continua falla si la precisión baja del 90 %.</p>
+        </div>
+        <div data-panel="estructura"><pre>sistema_experto/
+├── app.py
+├── main.py
+├── conocimiento/
+│   └── diagnostico_pc.json
+├── casos/
+│   └── casos_referencia.json
+├── sistema_experto/
+│   ├── modelo.py
+│   ├── conocimiento.py
+│   ├── motor.py
+│   ├── validacion.py
+│   ├── visualizacion.py
+│   └── cli.py
+└── tests/
+    ├── test_motor.py
+    ├── test_validacion.py
+    ├── test_consulta_dinamica.py
+    ├── test_visualizacion.py
+    └── test_app.py</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>modelo.py</code><span>Estructuras de datos: hechos, condiciones y reglas.</span></li>
+            <li><code>conocimiento.py</code><span>Carga y valida el JSON de reglas, y reporta todos los errores juntos.</span></li>
+            <li><code>motor.py</code><span>Motor de inferencia: recibe conocimiento y respuestas, y devuelve datos; no imprime nada.</span></li>
+            <li><code>validacion.py</code><span>Evalúa el sistema contra los casos de referencia.</span></li>
+            <li><code>visualizacion.py</code><span>Genera diagramas DOT del conocimiento y del razonamiento.</span></li>
+            <li><code>cli.py y app.py</code><span>Interfaces de consola y web (Streamlit): solo presentan, la lógica vive en el motor.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-edutrack" hidden>
+        <div data-panel="descripcion">
+            <p>Plataforma de gestión educativa construida como una SPA, sin frameworks: la landing, el login y el dashboard conviven sin recargar la página.</p>
+            <p>El dashboard muestra KPIs y gráficas con Chart.js. La gestión de estudiantes es un CRUD con búsqueda y filtros por varios criterios, paginación y formularios modales, con los datos guardados en localStorage.</p>
+            <p>Un motor de meta-validación audita el dataset con 20 reglas de negocio antes de mostrarlo.</p>
+        </div>
+        <div data-panel="estructura"><pre>edutrack/
+├── index.html
+├── css/
+│   ├── Style.css
+│   ├── Dashboard.css
+│   └── Estudiantes.css
+├── js/
+│   ├── App.js
+│   ├── Sidebar.js
+│   └── Validacion.js
+└── json/
+    └── Datos.json</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>App.js</code><span>Lógica principal: router de la SPA, CRUD de estudiantes, notificaciones y renderizado.</span></li>
+            <li><code>Sidebar.js</code><span>Menú lateral colapsable, con foco accesible y adaptación a pantallas pequeñas.</span></li>
+            <li><code>Validacion.js</code><span>Motor de meta-validación con 20 reglas de negocio.</span></li>
+            <li><code>Datos.json</code><span>Dataset inicial de 35 registros de muestra.</span></li>
+            <li><code>Chart.js</code><span>Librería de las gráficas del dashboard.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-hotel" hidden>
+        <div data-panel="descripcion">
+            <p>Sistema de gestión hotelera que hace operaciones CRUD en memoria y aplica la asincronía clásica de JavaScript.</p>
+            <p>En lugar de promesas, usa callbacks y recursividad asíncrona: el menú se pasa como callback a cada operación y se reactiva con setTimeout cuando termina la operación simulada de base de datos.</p>
+            <p>Cada habitación guarda su número, tipo, precio por noche (con 4 decimales), estado (Libre, Ocupada o Limpieza) y huésped. Se desarrolló con Gitflow.</p>
+        </div>
+        <div data-panel="estructura"><pre>gestion_hotel/index.html
+├── mostrarMenu()
+├── registrarHabitacion(callback)
+├── listarHabitaciones()
+├── buscarHabitacion(callback)
+├── cambiarEstado(callback)
+└── eliminarHabitacion()</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>mostrarMenu</code><span>Menú principal con prompt: cada opción llama a su función y vuelve al menú.</span></li>
+            <li><code>registrarHabitacion</code><span>Valida, espera con setTimeout y registra la habitación; luego ejecuta el callback.</span></li>
+            <li><code>buscarHabitacion</code><span>Busca una habitación por su número y simula la consulta con setTimeout.</span></li>
+            <li><code>cambiarEstado</code><span>Cambia el estado de una habitación: Libre, Ocupada o Limpieza.</span></li>
+            <li><code>listarHabitaciones y eliminarHabitacion</code><span>Listan los registros y eliminan uno.</span></li>
+        </ul></div>
+    </div>
 
     <footer class="pie-pagina">
         <div class="pie-contenido">
