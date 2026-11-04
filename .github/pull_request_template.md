@@ -27,7 +27,7 @@
 - [ ] Si se agregó un recurso externo (fuentes, scripts, iframes), se comprobó que carga en el sitio publicado.
 
 ### Contenido
-- [ ] Si cambió un texto en español, se actualizó su clave en `js/traducciones.js`.
+- [ ] Si cambió un texto en español, se actualizó su clave en `js/datos/traducciones-en.js`.
 - [ ] Las imágenes tienen `alt` descriptivo (o vacío si son decorativas).
 - [ ] Los nombres de archivo en `imagenes/` van en minúsculas.
 
