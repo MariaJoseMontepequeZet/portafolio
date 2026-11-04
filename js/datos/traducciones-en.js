@@ -103,7 +103,7 @@ export const TRADUCCIONES_EN = {
 
     /* ----- Proyectos ----- */
     'Proyectos · María José Montepeque Zet': 'Projects · María José Montepeque Zet',
-    'Proyectos de María José Montepeque Zet: sistema experto en Python, paneles de gestión con JavaScript, sistemas colaborativos con Git y persistencia de datos.': 'Projects by María José Montepeque Zet: Python expert system, JavaScript management dashboards, collaborative Git systems and data persistence.',
+    'Proyectos de María José Montepeque Zet: backend con PostgreSQL y Docker Compose, un sistema experto en Python y aplicaciones web con JavaScript.': 'Projects by María José Montepeque Zet: backend with PostgreSQL and Docker Compose, a Python expert system and web applications with JavaScript.',
     'Lo que he construido': 'What I\'ve built',
     'Proyectos académicos y profesionales, con mi rol y las tecnologías aplicadas en cada uno.': 'Academic and professional projects, with my role and the technologies applied in each one.',
     'IA': 'AI',
@@ -113,8 +113,6 @@ export const TRADUCCIONES_EN = {
     'Plataforma de gestión educativa. Construí una SPA sin frameworks con dashboard de KPIs y CRUD de estudiantes con búsqueda multicriterio, filtros y paginación; diseñé un motor de validación con 20 reglas de negocio.': 'Education management platform. I built a framework-free SPA with a KPI dashboard and a student CRUD with multi-criteria search, filters and pagination; I designed a validation engine with 20 business rules.',
     'Gestión de Hotel': 'Hotel Management',
     'Sistema de gestión hotelera centrado en la lógica asíncrona de JavaScript. Implementé reservas, disponibilidad de habitaciones y flujos con promesas y <code>async/await</code>.': 'Hotel management system centered on JavaScript asynchronous logic. I implemented bookings, room availability and flows with promises and <code>async/await</code>.',
-    'Gestor Cultural': 'Cultural Manager',
-    'Administrador con persistencia en JSON. Implementé manejo avanzado de excepciones y validación de datos técnicos.': 'Manager with JSON persistence. I implemented advanced exception handling and technical data validation.',
 
     /* ----- Contacto ----- */
     'Contacto · María José Montepeque Zet': 'Contact · María José Montepeque Zet',
@@ -205,7 +203,6 @@ export const TRADUCCIONES_EN = {
     'Panel de EduTrack con tarjetas de KPIs, una gráfica de progreso por mes y la lista de estudiantes.': 'EduTrack dashboard with KPI cards, a monthly progress chart and the student list.',
     'Cuadrícula de 20 espacios de Campus Parking, con vehículos y sus placas en los espacios ocupados.': 'Campus Parking grid of 20 spaces, with vehicles and their plates in the occupied ones.',
     'Habitaciones del hotel libres, ocupadas o en limpieza, junto con una función asíncrona de reserva.': 'Hotel rooms that are free, occupied or being cleaned, next to an asynchronous booking function.',
-    'Lista de eventos culturales, un archivo JSON y el manejo de excepciones en Python.': 'List of cultural events, a JSON file and exception handling in Python.',
     'Diseño de APIs REST e integración entre frontend y backend, como en DockerPulse.': 'REST API design and frontend-backend integration, as in DockerPulse.',
     'Identificación de comportamientos fuera de lo normal, aplicada en DockerPulse.': 'Identifying out-of-the-ordinary behavior, applied in DockerPulse.',
     'Página no encontrada': 'Page not found',
