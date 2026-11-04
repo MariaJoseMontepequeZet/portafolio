@@ -1,0 +1,29 @@
+name: Desplegar en el servidor
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: desplegar-portafolio
+  cancel-in-progress: false
+
+jobs:
+  desplegar:
+    runs-on: [self-hosted, portafolio]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copiar el sitio al servidor
+        run: |
+          mkdir -p "$HOME/portafolio/sitio"
+          rsync -a --delete \
+            --exclude='.git' --exclude='.github' --exclude='docs' \
+            --exclude='README.md' --exclude='LICENSE' --exclude='.gitignore' \
+            ./ "$HOME/portafolio/sitio/"
+
+      - name: Comprobar que el sitio responde
+        run: |
+          curl -fsS --retry 5 --retry-delay 3 --retry-all-errors -o /dev/null \
+            http://localhost:5000/

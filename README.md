@@ -4,6 +4,11 @@ Sitio web personal para presentar mi trayectoria académica, habilidades técnic
 
 > Hecho por **María José Montepeque Zet** ✨
 
+| | |
+|---|---|
+| **Sitio publicado** | https://portafoliomariajosemontepequezet.pamcing.me |
+| **Despliegue** | Automático al integrar en `main` ([guía](docs/despliegue-servidor.md)) |
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
@@ -21,6 +26,7 @@ Sitio web personal para presentar mi trayectoria académica, habilidades técnic
 - [⚙️ Cómo ejecutarlo](#️-cómo-ejecutarlo)
 - [📂 Estructura del proyecto](#-estructura-del-proyecto)
 - [🌿 Flujo de trabajo](#-flujo-de-trabajo)
+- [🚀 Despliegue](#-despliegue)
 - [📄 Licencia](#-licencia)
 
 ---
@@ -145,11 +151,21 @@ Portafolio/
 
 ## 🌿 Flujo de trabajo
 
-- `master`: versión publicada.
+- `main`: versión publicada. Un merge a `main` despliega el sitio.
 - `develop`: integración de cambios.
-- `feat/*`, `fix/*`, `docs/*`, `refactor/*`: ramas de trabajo que se integran con *pull request*.
+- `feat/*`, `fix/*`, `docs/*`, `refactor/*`: ramas de trabajo que se integran con *pull request* hacia `develop`, usando la plantilla de `.github/pull_request_template.md`.
 
 Los commits siguen *Conventional Commits* con emoji (por ejemplo, `feat: :lipstick: ...`).
+
+---
+
+## 🚀 Despliegue
+
+El sitio vive en un servidor propio con Docker: un contenedor nginx sirve la carpeta `~/portafolio/sitio` y Cloudflare pone delante el dominio, el HTTPS y la caché. El enlace es siempre el mismo: https://portafoliomariajosemontepequezet.pamcing.me
+
+**Despliegue automático:** `.github/workflows/desplegar.yml` se ejecuta al hacer push a `main`. Un runner propio instalado en el servidor copia el sitio a `~/portafolio/sitio` y comprueba que responda. Como el portafolio es estático, no hay nada que reconstruir.
+
+La configuración inicial (runner y carpeta del sitio) está paso a paso en [`docs/despliegue-servidor.md`](docs/despliegue-servidor.md). Lo que **no** es automático: los cambios en `docker-compose.yml` o en nginx, y la caché de Cloudflare.
 
 ---
 
