@@ -1,7 +1,9 @@
 /**
  * Ventana (`<dialog>`) con el detalle de un proyecto en pestañas: descripción,
  * estructura y módulos. Solo sabe mostrar los paneles que le entregan; no
- * conoce los proyectos ni de dónde salen los datos.
+ * conoce los proyectos ni de dónde salen los datos. Muestra únicamente las
+ * pestañas que el proyecto tiene (un proyecto privado, por ejemplo, puede no
+ * tener «estructura»).
  */
 export class DialogoDetalle {
     static PESTANAS = ['descripcion', 'estructura', 'modulos'];
@@ -29,13 +31,19 @@ export class DialogoDetalle {
         this.#construir();
     }
 
+    /** Pestañas para las que `datos` trae un panel, en el orden de PESTANAS. */
+    static pestanasDisponibles(datos) {
+        return DialogoDetalle.PESTANAS.filter((nombre) => datos.querySelector(`[data-panel="${nombre}"]`) !== null);
+    }
+
     abrir(titulo, datos) {
         const rotulos = DialogoDetalle.ROTULOS[this.#idioma.actual];
         this.#titulo.textContent = titulo;
         this.#cerrar.setAttribute('aria-label', rotulos.cerrar);
 
         this.#pestanas.replaceChildren();
-        for (const nombre of DialogoDetalle.PESTANAS) {
+        const disponibles = DialogoDetalle.pestanasDisponibles(datos);
+        for (const nombre of disponibles) {
             const boton = this.#documento.createElement('button');
             boton.type = 'button';
             boton.className = 'filtro-btn';
@@ -43,7 +51,7 @@ export class DialogoDetalle {
             boton.addEventListener('click', () => this.#mostrar(datos, nombre, boton));
             this.#pestanas.appendChild(boton);
         }
-        this.#mostrar(datos, 'descripcion', this.#pestanas.firstChild);
+        this.#mostrar(datos, disponibles[0], this.#pestanas.firstChild);
         this.#dialogo.showModal();
     }
 
