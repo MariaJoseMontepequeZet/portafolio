@@ -229,5 +229,6 @@ export const TRADUCCIONES_EN = {
     'Lo estoy aprendiendo y aún no tiene un proyecto propio.': 'I am learning it and it has no project of its own yet.',
     'Evidencia:': 'Evidence:',
     'Sistema Experto': 'Expert System',
-    'Scrum Foundation (SFPC)': 'Scrum Foundation (SFPC)'
+    'Scrum Foundation (SFPC)': 'Scrum Foundation (SFPC)',
+    'Ver demo': 'View demo'
 };
