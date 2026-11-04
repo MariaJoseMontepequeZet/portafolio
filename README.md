@@ -161,13 +161,11 @@ Los commits siguen *Conventional Commits* con emoji (por ejemplo, `feat: :lipsti
 
 ## 🚀 Despliegue
 
-El sitio vive en un servidor propio con Docker, junto a MarisolliFlix: Caddy sirve la carpeta del portafolio y Cloudflare pone delante el dominio, el HTTPS y la caché. El enlace es siempre el mismo: https://portafoliomariajosemontepequezet.pamcing.me
+El sitio vive en un servidor propio con Docker: un contenedor nginx sirve la carpeta `~/portafolio/sitio` y Cloudflare pone delante el dominio, el HTTPS y la caché. El enlace es siempre el mismo: https://portafoliomariajosemontepequezet.pamcing.me
 
-**Despliegue automático:** `.github/workflows/desplegar.yml` se ejecuta al hacer push a `main`. Un runner propio instalado en el servidor copia el sitio a `~/marisolliflix/portafolio` y comprueba que responda. Como el portafolio es estático, no hay nada que reconstruir.
+**Despliegue automático:** `.github/workflows/desplegar.yml` se ejecuta al hacer push a `main`. Un runner propio instalado en el servidor copia el sitio a `~/portafolio/sitio` y comprueba que responda. Como el portafolio es estático, no hay nada que reconstruir.
 
-El servidor aplica una política de contenido (CSP) estricta, así que el código no usa estilos ni scripts en línea. Si se agrega un recurso externo nuevo, hay que permitirlo también en la CSP del servidor.
-
-La configuración inicial (runner, Caddy y Cloudflare) está paso a paso en [`docs/despliegue-servidor.md`](docs/despliegue-servidor.md). Lo que **no** es automático: los cambios en Caddy o Docker Compose y la caché de Cloudflare.
+La configuración inicial (runner y carpeta del sitio) está paso a paso en [`docs/despliegue-servidor.md`](docs/despliegue-servidor.md). Lo que **no** es automático: los cambios en `docker-compose.yml` o en nginx, y la caché de Cloudflare.
 
 ---
 

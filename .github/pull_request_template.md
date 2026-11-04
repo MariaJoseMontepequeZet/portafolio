@@ -23,8 +23,8 @@
 
 ### Tecnología
 - [ ] Solo HTML, CSS y JavaScript puro (sin frameworks ni librerías de UI).
-- [ ] Sin estilos ni scripts en línea (`style="..."`, `onclick="..."`, `<script>` con código): el servidor aplica una política de contenido (CSP) estricta.
-- [ ] Si se agregó un recurso externo (fuentes, scripts, iframes), se permitió también en la CSP del servidor.
+- [ ] Sin estilos ni scripts en línea (`style="..."`, `onclick="..."`, `<script>` con código), para poder aplicar una política de contenido (CSP) estricta más adelante.
+- [ ] Si se agregó un recurso externo (fuentes, scripts, iframes), se comprobó que carga en el sitio publicado.
 
 ### Contenido
 - [ ] Si cambió un texto en español, se actualizó su clave en `js/traducciones.js`.

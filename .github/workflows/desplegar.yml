@@ -17,13 +17,13 @@ jobs:
 
       - name: Copiar el sitio al servidor
         run: |
-          mkdir -p "$HOME/marisolliflix/portafolio"
+          mkdir -p "$HOME/portafolio/sitio"
           rsync -a --delete \
             --exclude='.git' --exclude='.github' --exclude='docs' \
             --exclude='README.md' --exclude='LICENSE' --exclude='.gitignore' \
-            ./ "$HOME/marisolliflix/portafolio/"
+            ./ "$HOME/portafolio/sitio/"
 
       - name: Comprobar que el sitio responde
         run: |
           curl -fsS --retry 5 --retry-delay 3 --retry-all-errors -o /dev/null \
-            https://portafoliomariajosemontepequezet.pamcing.me/
+            http://localhost:5000/
