@@ -3,8 +3,9 @@
  * La clave es el texto en español tal como aparece en el HTML (con los espacios
  * colapsados); el valor es su traducción. El español vive en el HTML, así que
  * si cambias un texto allí, actualiza también su clave aquí.
+ * Es solo datos: lo consume js/preferencias/Traductor.js desde main.js.
  */
-window.TRADUCCIONES_EN = {
+export const TRADUCCIONES_EN = {
     /* ----- Comunes ----- */
     'Saltar al contenido': 'Skip to content',
     'Abrir menú': 'Open menu',

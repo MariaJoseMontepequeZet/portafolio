@@ -1,0 +1,10 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio web de María José Montepeque Zet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

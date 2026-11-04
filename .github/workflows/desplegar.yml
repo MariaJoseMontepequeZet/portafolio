@@ -20,6 +20,7 @@ jobs:
           mkdir -p "$HOME/portafolio/sitio"
           rsync -a --delete \
             --exclude='.git' --exclude='.github' --exclude='docs' \
+            --exclude='tests' --exclude='package.json' --exclude='node_modules' \
             --exclude='README.md' --exclude='LICENSE' --exclude='.gitignore' \
             ./ "$HOME/portafolio/sitio/"
 
