@@ -179,3 +179,12 @@
 .detalle-datos {
     display: none;
 }
+
+.proyecto-fecha {
+    color: var(--texto-tenue);
+    font-family: var(--fuente-titulos);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

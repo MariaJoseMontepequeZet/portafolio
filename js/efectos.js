@@ -258,6 +258,19 @@
         obs.observe(linea);
     }
 
+
+    /* ---------- Foco de luz bajo el cursor en las tarjetas ---------- */
+    function foco() {
+        if (sinMovimiento) return;
+        document.addEventListener('pointermove', function (e) {
+            var t = e.target.closest && e.target.closest('.tarjeta');
+            if (!t) return;
+            var r = t.getBoundingClientRect();
+            t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+            t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        }, { passive: true });
+    }
+
     /* ---------- Transición suave al cambiar de tema ---------- */
     function tema() {
         var btn = document.getElementById('btn-tema');
@@ -279,6 +292,7 @@
         copiar();
         detalle();
         lineaTiempo();
+        foco();
         tema();
     }
 
