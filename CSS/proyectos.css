@@ -56,3 +56,126 @@
         grid-template-columns: 1fr;
     }
 }
+/* ---------- PORTADA SIN CAPTURA ---------- */
+.proyecto-portada-texto {
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(60% 80% at 80% 0%, rgba(var(--primario-rgb), 0.35), transparent 70%),
+        var(--superficie-2);
+}
+
+.proyecto-portada-texto span {
+    font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 600;
+    color: var(--chip-texto);
+}
+
+/* ---------- DETALLE DE PROYECTO ---------- */
+.detalle {
+    width: min(680px, calc(100% - 32px));
+    max-height: calc(100vh - 48px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--borde-activo);
+    border-radius: var(--radio);
+    background: var(--superficie);
+    color: var(--texto);
+    box-shadow: var(--sombra-flotante);
+}
+
+.detalle::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.detalle-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px 0;
+}
+
+.detalle-cabecera h2 {
+    font-size: 1.3rem;
+}
+
+.detalle-cerrar {
+    flex: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--borde);
+    background: var(--vidrio);
+    color: var(--texto);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.detalle-pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 24px 0;
+}
+
+.detalle-cuerpo {
+    padding: 20px 24px 26px;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.detalle-cuerpo p {
+    color: var(--texto-suave);
+    line-height: 1.7;
+}
+
+.detalle-cuerpo p+p {
+    margin-top: 12px;
+}
+
+.detalle-cuerpo code {
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: var(--codigo-fondo);
+    font-size: 0.88em;
+}
+
+.detalle-cuerpo pre {
+    overflow-x: auto;
+    padding: 16px;
+    border-radius: var(--radio-sm);
+    background: var(--fondo);
+    border: 1px solid var(--borde);
+    font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #4ade80;
+}
+
+:root[data-theme="light"] .detalle-cuerpo pre {
+    color: #15803d;
+}
+
+.detalle-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.detalle-lista li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detalle-lista span {
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+}
+
+.detalle-datos {
+    display: none;
+}

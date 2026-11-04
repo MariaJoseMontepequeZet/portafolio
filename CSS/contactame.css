@@ -81,3 +81,14 @@
         padding-top: 56px;
     }
 }
+.contacto-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.copiado {
+    color: var(--texto-suave);
+    font-size: 0.88rem;
+}

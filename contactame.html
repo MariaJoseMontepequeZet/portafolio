@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="imagenes/logo.svg">
     <script src="js/traducciones.js"></script>
     <script src="js/preferencias.js"></script>
+    <script src="js/efectos.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     <header class="navbar">
         <div class="navbar-contenido">
-            <a href="index.html" class="logo">
+            <a href="./" class="logo">
                 <img class="logo-marca" src="imagenes/logo.svg" alt="">
                 <span>María José Montepeque</span>
             </a>
@@ -39,7 +40,7 @@
 
             <nav class="nav-panel" aria-label="Principal">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./">Inicio</a></li>
                     <li><a href="sobremi.html">Sobre mí</a></li>
                     <li><a href="habilidades.html">Habilidades</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
@@ -70,11 +71,15 @@
         <div>
             <div class="encabezado-seccion">
                 <span class="etiqueta">Contacto</span>
-                <h1 class="titulo-seccion">Hablemos de tu próximo proyecto</h1>
-                <p class="subtitulo-seccion">Estoy disponible para colaboraciones en desarrollo de software,
-                    ciberseguridad o análisis de datos. Respondo en menos de 48 horas.</p>
+                <h1 class="titulo-seccion">Abierta a nuevas oportunidades</h1>
+                <p class="subtitulo-seccion">Disponible para colaboraciones en desarrollo de software y ciberseguridad. Respondo en un plazo máximo de 48 horas.</p>
             </div>
-            <a href="mailto:majomon72@gmail.com" class="btn btn-primario">Escribirme</a>
+            <div class="contacto-acciones">
+                <a href="mailto:majozet8@gmail.com" class="btn btn-primario">Escribirme</a>
+                <a href="cv/CV-Maria-Jose-Montepeque.pdf" class="btn btn-secundario" download>Descargar CV</a>
+                <button type="button" class="btn btn-secundario" data-copiar="majozet8@gmail.com">Copiar correo</button>
+                <span class="copiado" role="status"></span>
+            </div>
         </div>
 
         <ul class="contacto-lista">
@@ -89,7 +94,7 @@
                     </span>
                     <span class="contacto-texto">
                         <strong>LinkedIn</strong>
-                        <small>in/mariajosemontepequezet</small>
+                        <small>in/mariamontepeque</small>
                     </span>
                     <svg class="contacto-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -117,7 +122,7 @@
                 </a>
             </li>
             <li>
-                <a class="tarjeta contacto-enlace" href="mailto:majomon72@gmail.com">
+                <a class="tarjeta contacto-enlace" href="mailto:majozet8@gmail.com">
                     <span class="contacto-icono">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -127,7 +132,7 @@
                     </span>
                     <span class="contacto-texto">
                         <strong>Correo</strong>
-                        <small>majomon72@gmail.com</small>
+                        <small>majozet8@gmail.com</small>
                     </span>
                     <svg class="contacto-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -145,7 +150,7 @@
                 <a href="https://github.com/MariaJoseMontepequeZet" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/mariamontepeque" target="_blank"
                     rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:majomon72@gmail.com">Correo</a>
+                <a href="mailto:majozet8@gmail.com">Correo</a>
             </nav>
         </div>
     </footer>

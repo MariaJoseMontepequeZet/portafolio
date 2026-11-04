@@ -25,3 +25,107 @@
     color: var(--texto-suave);
     line-height: 1.7;
 }
+/* ---------- TRAYECTORIA ---------- */
+.formacion {
+    margin-top: 72px;
+}
+
+.linea-tiempo {
+    position: relative;
+    list-style: none;
+    margin-left: 8px;
+    padding-left: 32px;
+}
+
+.linea-tiempo::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 0;
+    width: 2px;
+    background: var(--degradado);
+    transform-origin: top;
+}
+
+.hito {
+    position: relative;
+    padding-bottom: 32px;
+}
+
+.hito:last-child {
+    padding-bottom: 0;
+}
+
+.hito::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -39px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--primario);
+    background: var(--fondo);
+}
+
+.hito-fecha {
+    color: var(--primario);
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hito h3 {
+    font-size: 1.15rem;
+    margin: 6px 0 8px;
+}
+
+.hito p {
+    max-width: 62ch;
+    color: var(--texto-suave);
+    line-height: 1.65;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .linea-tiempo.sin-dibujar::before {
+        transform: scaleY(0);
+    }
+
+    .linea-tiempo::before {
+        transition: transform 1.2s ease;
+    }
+}
+
+/* ---------- CERTIFICACIONES ---------- */
+.cert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px;
+}
+
+.cert h3 {
+    font-size: 1.1rem;
+}
+
+.cert p {
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.cert .cert-emisor {
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.cert-enlace {
+    margin-top: auto;
+    color: var(--primario);
+    font-size: 0.9rem;
+    font-weight: 600;
+}

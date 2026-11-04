@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="imagenes/logo.svg">
     <script src="js/traducciones.js"></script>
     <script src="js/preferencias.js"></script>
+    <script src="js/efectos.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     <header class="navbar">
         <div class="navbar-contenido">
-            <a href="index.html" class="logo">
+            <a href="./" class="logo">
                 <img class="logo-marca" src="imagenes/logo.svg" alt="">
                 <span>María José Montepeque</span>
             </a>
@@ -39,7 +40,7 @@
 
             <nav class="nav-panel" aria-label="Principal">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./">Inicio</a></li>
                     <li><a href="sobremi.html" aria-current="page">Sobre mí</a></li>
                     <li><a href="habilidades.html">Habilidades</a></li>
                     <li><a href="proyectos.html">Proyectos</a></li>
@@ -79,9 +80,7 @@
                 <div class="perfil-cuerpo">
                     <span class="etiqueta">¿Quién soy?</span>
                     <h2>María José</h2>
-                    <p>Soy una persona expresiva y auténtica, que valora la conexión con los demás y la forma en que se
-                        comunica con su entorno. Busco desenvolverme con naturalidad en lo que hago, manteniendo un
-                        equilibrio entre lo personal y lo social, con una manera clara de expresarme.</p>
+                    <p>Me caracterizo por la paciencia, la autonomía y la firmeza de criterio: mantengo la calma en proyectos exigentes y defiendo mis ideas con argumentos, sin dejar de escuchar otras perspectivas. Disfruto el trabajo en equipo y siempre estoy dispuesta a ayudar.</p>
                 </div>
             </article>
 
@@ -101,9 +100,7 @@
                 <div class="perfil-cuerpo">
                     <span class="etiqueta">En formación</span>
                     <h2>Aprendizaje continuo</h2>
-                    <p>Actualmente fortalezco HTML y CSS. He trabajado con Python, metodologías Scrum e Inteligencia
-                        Artificial. A corto plazo, mi objetivo es dominar JavaScript para avanzar hacia un desarrollo
-                        web más completo y dinámico.</p>
+                    <p>Cursando el Técnico en Desarrollo de Software (Full Stack) en Campuslands: 1,600 h de programación, 300 h de inglés y 200 h de habilidades blandas. Profundizo en Node.js, TypeScript y PostgreSQL con Docker Compose, y complemento con certificaciones en MongoDB y Power BI.</p>
                 </div>
             </article>
 
@@ -118,6 +115,73 @@
                 </div>
             </article>
         </div>
+
+        <section class="formacion" aria-labelledby="titulo-formacion">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">Trayectoria</span>
+                <h2 class="titulo-seccion" id="titulo-formacion">Formación y experiencia</h2>
+            </div>
+
+            <ol class="linea-tiempo">
+                <li class="hito">
+                    <span class="hito-fecha">2026 – actualidad</span>
+                    <h3>Desarrolladora Backend — SoftPlus GT</h3>
+                    <p>Proyecto OMS Backend: migración de una base de datos legacy a PostgreSQL, entorno con Docker Compose y pruebas documentadas en Postman.</p>
+                </li>
+                <li class="hito">
+                    <span class="hito-fecha">Enero 2026 – actualidad</span>
+                    <h3>Técnico en Desarrollo de Software (Full Stack) — Campuslands GT</h3>
+                    <p>Programa intensivo presencial: 1,600 h de programación, 300 h de inglés y 200 h de habilidades blandas.</p>
+                </li>
+                <li class="hito">
+                    <span class="hito-fecha">En curso</span>
+                    <h3>Ingeniería en Ciencias y Sistemas — USAC</h3>
+                    <p>Estudiante de la Universidad de San Carlos de Guatemala.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="formacion" id="certificaciones" aria-labelledby="titulo-certs">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">Certificaciones</span>
+                <h2 class="titulo-seccion" id="titulo-certs">Completadas y en curso</h2>
+            </div>
+
+            <div class="grid-3">
+                <article class="tarjeta cert">
+                    <span class="chip">Ciberseguridad</span>
+                    <h3>Certificación en Ciberseguridad</h3>
+                    <p class="cert-emisor">IRSI · SISAP, Guatemala</p>
+                    <p>Febrero a noviembre de 2025 · 593 horas de instrucción.</p>
+                </article>
+                <article class="tarjeta cert">
+                    <span class="chip">IA · Python</span>
+                    <h3>Samsung Innovation Campus: Inteligencia Artificial</h3>
+                    <p class="cert-emisor">Samsung · Fundesteam</p>
+                    <p>25 de agosto al 19 de diciembre de 2025 · 200 horas en Python e Inteligencia Artificial.</p>
+                </article>
+                <article class="tarjeta cert">
+                    <span class="chip">Scrum</span>
+                    <h3>Scrum Foundation Professional Certificate (SFPC™)</h3>
+                    <p class="cert-emisor">Certiprof</p>
+                    <p>Obtenida el 23 de octubre de 2026 · vigente hasta el 23 de octubre de 2027 · ID 117244431.</p>
+                </article>
+                <article class="tarjeta cert">
+                    <span class="chip chip-estado">En curso</span>
+                    <h3>MongoDB: ruta Node.js</h3>
+                    <p class="cert-emisor">MongoDB</p>
+                    <p>Desde el 17 de septiembre de 2026.</p>
+                    <a class="cert-enlace" href="https://sites.google.com/mongodb.com/certificationprogramspanishlat/programa" target="_blank" rel="noopener noreferrer">Ver programa</a>
+                </article>
+                <article class="tarjeta cert">
+                    <span class="chip chip-estado">En curso</span>
+                    <h3>Power BI</h3>
+                    <p class="cert-emisor">Planeta Virtual 502</p>
+                    <p>Desde el 30 de septiembre de 2026.</p>
+                    <a class="cert-enlace" href="https://plataforma.planetavirtual502.com/" target="_blank" rel="noopener noreferrer">Ver plataforma</a>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer class="pie-pagina">
@@ -127,7 +191,7 @@
                 <a href="https://github.com/MariaJoseMontepequeZet" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/mariamontepeque" target="_blank"
                     rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:majomon72@gmail.com">Correo</a>
+                <a href="mailto:majozet8@gmail.com">Correo</a>
             </nav>
         </div>
     </footer>
