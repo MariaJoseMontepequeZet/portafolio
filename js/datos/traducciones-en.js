@@ -51,7 +51,7 @@ export const TRADUCCIONES_EN = {
     'Más allá del código': 'Beyond the code',
     'Lo que me define, lo que disfruto y hacia dónde voy.': 'What defines me, what I enjoy and where I\'m headed.',
     '¿Quién soy?': 'Who am I?',
-    'Me caracterizo por la paciencia, la autonomía y la firmeza de criterio: mantengo la calma en proyectos exigentes, trabajo de forma independiente y defiendo mis ideas con argumentos, sin dejar de escuchar otras perspectivas. Cumplo con lo que me comprometo, busco acuerdos en lugar de imponer mi punto de vista y disfruto el trabajo en equipo, siempre dispuesta a ayudar.': 'I\'m known for patience, autonomy and firmness of judgment: I stay calm in demanding projects, work independently and defend my ideas with arguments, while still listening to other perspectives. I keep my commitments, look for agreements instead of imposing my point of view and enjoy teamwork, always willing to help.',
+    'Estudiante de Ingeniería en Ciencias y Sistemas, desarrolladora de software en formación. Soy paciente, independiente y firme, mantengo la calma bajo presión, trabajo con orden y escucho otras ideas sin perder mi criterio. Me mueve la curiosidad por entender cómo funcionan los sistemas y el compromiso en hacer las cosas bien. Busco crecer en backend y ciberseguridad dentro de un equipo que apueste por la calidad y la mejora continua.': 'Information and Computer Systems Engineering student and software developer in training. I am patient, independent and firm: I stay calm under pressure, work in an orderly way and listen to other ideas without losing my own judgment. I am driven by curiosity about how systems work and by the commitment to doing things well. I want to grow in backend and cybersecurity within a team that values quality and continuous improvement.',
     'Lo que disfruto': 'What I enjoy',
     'Mis gustos': 'My interests',
     'Combino lo físico, lo mental y lo creativo: gimnasia, cubos Rubik y lectura de romance y fantasía por sus historias originales. Me encanta compartir con amigos y hacer lives para expresarme y convivir de forma cercana.': 'I blend the physical, the mental and the creative: gymnastics, Rubik\'s cubes and reading romance and fantasy for their original stories. I love spending time with friends and doing live streams to express myself and connect closely.',
@@ -64,8 +64,13 @@ export const TRADUCCIONES_EN = {
 
     /* ----- Habilidades ----- */
     'Habilidades · María José Montepeque Zet': 'Skills · María José Montepeque Zet',
-    'Stack técnico de María José Montepeque Zet: desarrollo web, TypeScript, backend con Node.js, bases de datos SQL y NoSQL, Docker, Netlify, n8n, inteligencia artificial, Git y Scrum.': 'Technical stack of María José Montepeque Zet: web development, TypeScript, backend with Node.js, SQL and NoSQL databases, Docker, Netlify, n8n, artificial intelligence, Git and Scrum.',
     'Stack y herramientas': 'Stack & tools',
+    'Lenguajes': 'Languages',
+    'Frontend': 'Frontend',
+    'IA / Datos': 'AI / Data',
+    'DevOps': 'DevOps',
+    'Otras herramientas': 'Other tools',
+    'Stack técnico de María José Montepeque Zet: lenguajes, backend con Node.js y FastAPI, bases de datos, frontend, IA, DevOps con Docker y ciberseguridad.': 'Technical stack of María José Montepeque Zet: languages, backend with Node.js and FastAPI, databases, frontend, AI, DevOps with Docker and cybersecurity.',
     'Tecnologías con las que construyo, despliego, colaboro y organizo mi trabajo.': 'Technologies I use to build, deploy, collaborate and organize my work.',
     'Desarrollo': 'Development',
     'Estructura semántica y accesible para contenido web organizado.': 'Semantic, accessible structure for well-organized web content.',
