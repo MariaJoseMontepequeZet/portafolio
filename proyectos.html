@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Proyectos de María José Montepeque Zet: backend con PostgreSQL y Docker Compose, un sistema experto en Python y aplicaciones web con JavaScript.">
+        content="Proyectos de María José Montepeque Zet: plataformas web con JavaScript, backend con Node.js y PostgreSQL, un sistema experto en Python y automatización con n8n.">
     <meta name="theme-color" content="#0b0a14">
     <link rel="canonical" href="https://portafoliomariajosemontepequezet.pamcing.me/proyectos.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="María José Montepeque Zet">
     <meta property="og:locale" content="es_ES">
     <meta property="og:title" content="Proyectos · María José Montepeque Zet">
-    <meta property="og:description" content="Proyectos de María José Montepeque Zet: backend con PostgreSQL y Docker Compose, un sistema experto en Python y aplicaciones web con JavaScript.">
+    <meta property="og:description" content="Proyectos de María José Montepeque Zet: plataformas web con JavaScript, backend con Node.js y PostgreSQL, un sistema experto en Python y automatización con n8n.">
     <meta property="og:url" content="https://portafoliomariajosemontepequezet.pamcing.me/proyectos.html">
     <meta property="og:image" content="https://portafoliomariajosemontepequezet.pamcing.me/imagenes/og.jpg?v=1">
     <meta property="og:image:type" content="image/jpeg">
@@ -101,6 +101,20 @@
                 </div>
             </article>
 
+            <article class="tarjeta proyecto" id="tutorbot">
+                <img class="proyecto-portada" src="imagenes/proyecto-tutorbot.svg" alt="Diagrama de los flujos de n8n de TutorBot: el flujo conversacional con el agente de IA, el flujo de recordatorios y las cinco hojas de Google Sheets.">
+                <div class="proyecto-cuerpo">
+                    <div class="chips"><span class="chip">n8n</span><span class="chip">IA</span><span class="chip">Telegram</span><span class="chip">Google Sheets</span></div>
+                    <time class="proyecto-fecha">Julio 2026</time>
+                    <h2>TutorBot</h2>
+                    <p>Bot de tutorías con IA. Fui la desarrolladora principal: diseñé el flujo completo de automatización en n8n (más de 65 nodos), integré la API de Telegram con Google Sheets, implementé la gestión de errores con reintentos automáticos y desplegué la solución en Docker con un entorno reproducible.</p>
+                    <div class="proyecto-acciones">
+                        <span class="btn btn-secundario btn-pequeno btn-deshabilitado" aria-disabled="true">Repositorio próximamente</span>
+                        <button type="button" class="btn btn-primario btn-pequeno" data-detalle="tutorbot">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
             <article class="tarjeta proyecto" id="sistema-experto">
                 <img class="proyecto-portada" src="imagenes/proyecto-sistema-experto.svg" alt="Esquema del sistema experto: una regla en JSON, el motor de inferencia y la consola de encadenamiento hacia atrás.">
                 <div class="proyecto-cuerpo">
@@ -124,46 +138,58 @@
                 </div>
             </article>
 
-            <article class="tarjeta proyecto" id="edutrack">
-                <img class="proyecto-portada" src="imagenes/proyecto-edutrack.svg" alt="Panel de EduTrack con tarjetas de KPIs, una gráfica de progreso por mes y la lista de estudiantes.">
+            <article class="tarjeta proyecto" id="studentscope">
+                <img class="proyecto-portada" src="imagenes/proyecto-studentscope.svg" alt="Panel de StudentScope MJ con tarjetas de KPIs, una gráfica de progreso por mes y la lista de estudiantes.">
                 <div class="proyecto-cuerpo">
-                    <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span
-                            class="chip">CSS3</span></div>
+                    <div class="chips"><span class="chip">JavaScript</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span><span class="chip">HTML5</span></div>
                     <time class="proyecto-fecha">Mayo 2026</time>
-                    <h2>EduTrack</h2>
-                    <p>Plataforma de gestión educativa. Construí una SPA sin frameworks con dashboard de KPIs y CRUD de estudiantes con búsqueda multicriterio, filtros y paginación; diseñé un motor de validación con 20 reglas de negocio.</p>
+                    <h2>StudentScope MJ</h2>
+                    <p>Plataforma de gestión educativa. Construí una SPA sin frameworks con dashboard de KPIs y CRUD de estudiantes con búsqueda multicriterio, filtros y paginación; diseñé un motor de validación con 20 reglas de negocio. Las cuentas y las sesiones viven en un backend propio con Node.js, Express y PostgreSQL. Para probar la demo, crea una cuenta con «Crear cuenta».</p>
                     <div class="proyecto-acciones">
-                        <a href="https://github.com/MariaJoseMontepequeZet/edutrack_maria-montepeque"
-                            target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
-                            Ver repositorio
+                        <a href="https://github.com/MariaJoseMontepequeZet/studentscope-mj-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
+                            Repositorio frontend
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M7 17L17 7M8 7h9v9" />
                             </svg>
                         </a>
-                        <a href="https://mariajosemontepequezet.github.io/edutrack_maria-montepeque/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
-                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="edutrack">Ver detalle</button>
+                        <a href="https://github.com/MariaJoseMontepequeZet/studentscope-mj-backend" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
+                            Repositorio backend
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </a>
+                        <a href="https://studentscopemj.pamcing.me/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
+                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="studentscope">Ver detalle</button>
                     </div>
                 </div>
             </article>
 
-            <article class="tarjeta proyecto" id="campus-parking">
-                <img class="proyecto-portada" src="imagenes/proyecto-campus-parking.svg" alt="Cuadrícula de espacios de Campus Parking, con vehículos y sus placas en los espacios ocupados.">
+            <article class="tarjeta proyecto" id="slotspot">
+                <img class="proyecto-portada" src="imagenes/proyecto-slotspot.svg" alt="Cuadrícula de 20 espacios de SlotSpot MJ, con vehículos y sus placas en los espacios ocupados.">
                 <div class="proyecto-cuerpo">
-                    <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Web Components</span></div>
+                    <div class="chips"><span class="chip">JavaScript</span><span class="chip">Web Components</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div>
                     <time class="proyecto-fecha">Mayo 2026</time>
-                    <h2>Campus Parking</h2>
-                    <p>Aplicación web para administrar un parqueadero universitario. Diseñé componentes reutilizables con Shadow DOM para la gestión de espacios, el registro de vehículos y el cálculo de tarifas; apliqué control de versiones con Git y un flujo basado en pull requests. Persistencia en <code>localStorage</code>. Cuenta de la demo: <code>admin@campusparking.com</code> · <code>Admin123</code>.</p>
+                    <h2>SlotSpot MJ</h2>
+                    <p>Sistema de parqueo con Web Components para administrar un parqueadero universitario. Diseñé componentes reutilizables con Shadow DOM para la gestión de espacios, el registro de vehículos y el cálculo de tarifas; apliqué control de versiones con Git y un flujo basado en pull requests. El backend con FastAPI y Docker está en preparación. Cuenta de la demo: <code>admin@slotspotmj.com</code> · <code>Admin123</code>.</p>
                     <div class="proyecto-acciones">
-                        <a href="https://github.com/MariaJoseMontepequeZet/CampusParking_MariaMontepequeZetJose" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
-                            Ver repositorio
+                        <a href="https://github.com/MariaJoseMontepequeZet/slotspot-mj-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
+                            Repositorio frontend
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M7 17L17 7M8 7h9v9" />
                             </svg>
                         </a>
-                        <a href="https://mariajosemontepequezet.github.io/CampusParking_MariaMontepequeZetJose/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
-                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="parking">Ver detalle</button>
+                        <a href="https://github.com/MariaJoseMontepequeZet/slotspot-mj" target="_blank" rel="noopener noreferrer" class="btn btn-secundario btn-pequeno">
+                            Repositorio backend
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </a>
+                        <a href="https://slotspotmj.pamcing.me/" target="_blank" rel="noopener noreferrer" class="btn btn-primario btn-pequeno">Ver demo</a>
+                        <button type="button" class="btn btn-secundario btn-pequeno" data-detalle="slotspot">Ver detalle</button>
                     </div>
                 </div>
             </article>
@@ -189,43 +215,21 @@
                 </div>
             </article>
 
+            <article class="tarjeta proyecto" id="dockerpulse">
+                <img class="proyecto-portada" src="imagenes/proyecto-dockerpulse.svg" alt="Panel de DockerPulse con el uso de CPU y memoria de cuatro contenedores y una gráfica con una anomalía detectada.">
+                <div class="proyecto-cuerpo">
+                    <div class="chips"><span class="chip">Docker</span><span class="chip">IA</span><span class="chip">Frontend</span><span class="chip chip-estado">1.er lugar</span></div>
+                    <time class="proyecto-fecha">2025</time>
+                    <h2>DockerPulse — Mantenimiento predictivo con IA</h2>
+                    <p>Proyecto del Hackathon Samsung Innovation Campus 2025 (Centroamérica y el Caribe), en un equipo de 4 personas. Frontend e integración: diseñé el panel de monitoreo en tiempo real de contenedores Docker, con visualización de recursos y control de reinicio manual, y lideré la integración entre frontend y backend y de las APIs de comunicación.</p>
+                    <div class="proyecto-acciones">
+                        <button type="button" class="btn btn-primario btn-pequeno" data-detalle="dockerpulse">Ver detalle</button>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </main>
-
-    <div class="detalle-datos" id="detalle-parking" hidden>
-        <div data-panel="descripcion">
-            <p>Aplicación web para gestionar un parqueadero universitario con login, registro de vehículos con prefijo automático por tipo, cobro por horas de permanencia y reportes de ganancias por vehículo.</p>
-            <p>Reto que resolví: los Web Components usan Shadow DOM y sus eventos no llegaban al listener global. Cambié a <code>window.dispatchEvent()</code> y armé un bus de eventos central en <code>app.js</code>.</p>
-            <p>También incluye validación de placas y espacios duplicados, perfil editable e idioma ES/EN, todo guardado en <code>localStorage</code>.</p>
-        </div>
-        <div data-panel="estructura"><pre>CampusParking/
-├── index.html
-├── css/
-│   └── 9 hojas por componente
-└── js/
-    ├── app.js
-    ├── storage.js
-    ├── i18n.js
-    └── components/
-        ├── LoginPage.js
-        ├── AppNav.js
-        ├── SlotsGrid.js
-        ├── EntryForm.js
-        ├── IncomeReports.js
-        ├── UserProfile.js
-        ├── BillingCard.js
-        └── EditService.js</pre></div>
-        <div data-panel="modulos"><ul class="detalle-lista">
-            <li><code>LoginPage</code><span>Autenticación con sesión y opción de recordar credenciales.</span></li>
-            <li><code>AppNav</code><span>Navegación y contadores de vehículos y espacios libres.</span></li>
-            <li><code>SlotsGrid</code><span>Grilla visual de 50 espacios, libres u ocupados.</span></li>
-            <li><code>EntryForm</code><span>Registro y edición con validación de placas.</span></li>
-            <li><code>IncomeReports</code><span>Historial de pagos y totales por tipo de vehículo.</span></li>
-            <li><code>UserProfile</code><span>Perfil editable, cambio de contraseña e idioma.</span></li>
-        </ul></div>
-    </div>
-
-
 
     <div class="detalle-datos" id="detalle-oms" hidden>
         <div data-panel="descripcion">
@@ -239,6 +243,38 @@
             <li><code>Manejo de errores</code><span>Centralizado: un solo punto decide cómo responder a cada fallo.</span></li>
             <li><code>Docker Compose</code><span>Entorno reproducible para levantar los servicios.</span></li>
             <li><code>Postman</code><span>Pruebas documentadas de cada servicio.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-tutorbot" hidden>
+        <div data-panel="descripcion">
+            <p>Bot de tutorías académicas hecho en n8n: los estudiantes piden, consultan y cancelan tutorías conversando por Telegram con un agente de IA que revisa la disponibilidad de los tutores, registra la tutoría y avisa al tutor.</p>
+            <p>El agente sigue un asistente paso a paso y responde siempre con JSON estricto, que se convierte en botones de Telegram. Evita procesar dos veces el mismo mensaje y resuelve la identidad del estudiante antes de registrar nada.</p>
+            <p>Son más de 65 nodos, con gestión de errores y reintentos automáticos, desplegados en Docker con un entorno reproducible. Un segundo flujo, disparado por un webhook, envía recordatorios a estudiantes y tutores el día de la tutoría. Lo desarrollé en pareja con Allison Vargas.</p>
+        </div>
+        <div data-panel="estructura"><pre>TutorBot (n8n)/
+├── Flujo conversacional
+│   ├── Telegram Trigger
+│   ├── Code: filtrar duplicados
+│   ├── AI Agent + memoria + 12 tools
+│   ├── Code: parsear salida IA
+│   └── HTTP Request → Telegram
+├── Flujo de recordatorios
+│   ├── Webhook /tutorbot-recordatorios
+│   ├── Sheets: tutorías del día
+│   └── Telegram: estudiante y tutor
+└── Google Sheets
+    ├── TUTORES
+    ├── DISPONIBILIDAD
+    ├── TUTORIAS
+    ├── ESTUDIANTES
+    └── SESSIONS</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>AI Agent</code><span>Agente de LangChain con gpt-4o-mini, memoria por chat y 12 herramientas.</span></li>
+            <li><code>Telegram</code><span>Entrada de mensajes y teclados dinámicos con la API de Telegram.</span></li>
+            <li><code>Google Sheets</code><span>Cinco hojas como base de datos de tutores, horarios y tutorías.</span></li>
+            <li><code>Webhook</code><span>Dispara el flujo de recordatorios diarios.</span></li>
+            <li><code>Code (JavaScript)</code><span>Deduplicación de mensajes y lectura de la salida del agente.</span></li>
         </ul></div>
     </div>
 
@@ -278,30 +314,91 @@
         </ul></div>
     </div>
 
-    <div class="detalle-datos" id="detalle-edutrack" hidden>
+    <div class="detalle-datos" id="detalle-studentscope" hidden>
         <div data-panel="descripcion">
-            <p>Plataforma de gestión educativa construida como una SPA, sin frameworks: la landing, el login y el dashboard conviven sin recargar la página.</p>
-            <p>El dashboard muestra KPIs y gráficas con Chart.js. La gestión de estudiantes es un CRUD con búsqueda y filtros por varios criterios, paginación y formularios modales, con los datos guardados en localStorage.</p>
-            <p>Un motor de meta-validación audita el dataset con 20 reglas de negocio antes de mostrarlo.</p>
+            <p>Plataforma de gestión educativa construida como una SPA sin frameworks: la landing, el registro, el login y el dashboard conviven sin recargar la página.</p>
+            <p>El dashboard muestra KPIs y gráficas con Chart.js. La gestión de estudiantes es un CRUD con búsqueda y filtros por varios criterios, paginación y formularios modales, y un motor de validación audita el dataset con 20 reglas de negocio.</p>
+            <p>Las cuentas viven en un backend propio con Node.js, Express y PostgreSQL: registro, sesión con una cookie firmada, roles de usuario y administrador, y una sección para que el administrador gestione las cuentas. Los estudiantes, los cursos y los reportes todavía usan datos de ejemplo guardados en el navegador.</p>
         </div>
-        <div data-panel="estructura"><pre>edutrack/
+        <div data-panel="estructura"><pre>studentscope-mj-frontend/
 ├── index.html
 ├── css/
 │   ├── Style.css
 │   ├── Dashboard.css
-│   └── Estudiantes.css
+│   ├── Estudiantes.css
+│   └── Cuentas.css
 ├── js/
 │   ├── App.js
+│   ├── Api.js
+│   ├── Cuentas.js
 │   ├── Sidebar.js
-│   └── Validacion.js
-└── json/
-    └── Datos.json</pre></div>
+│   ├── Validacion.js
+│   ├── Escapar.js
+│   └── Iconos.js
+├── json/Datos.json
+└── test/
+
+studentscope-mj-backend/
+├── server.js
+├── Dockerfile
+├── src/
+│   ├── app.js
+│   ├── config.js
+│   ├── db/
+│   ├── middleware/
+│   ├── repositorios/
+│   ├── rutas/
+│   ├── seguridad/
+│   └── servicios/
+└── test/</pre></div>
         <div data-panel="modulos"><ul class="detalle-lista">
-            <li><code>App.js</code><span>Lógica principal: router de la SPA, CRUD de estudiantes, notificaciones y renderizado.</span></li>
-            <li><code>Sidebar.js</code><span>Menú lateral colapsable, con foco accesible y adaptación a pantallas pequeñas.</span></li>
-            <li><code>Validacion.js</code><span>Motor de meta-validación con 20 reglas de negocio.</span></li>
-            <li><code>Datos.json</code><span>Dataset inicial de 35 registros de muestra.</span></li>
-            <li><code>Chart.js</code><span>Librería de las gráficas del dashboard.</span></li>
+            <li><code>App.js</code><span>Lógica principal: enrutador de la SPA, CRUD de estudiantes, gráficas, cursos, reportes y notificaciones.</span></li>
+            <li><code>Validacion.js</code><span>Motor de validación del dataset con 20 reglas de negocio, con pruebas en Vitest.</span></li>
+            <li><code>Api.js y Cuentas.js</code><span>Cliente de la API y sección del administrador: lista, edición, cambio de rol y eliminación de cuentas.</span></li>
+            <li><code>rutas/ y servicios/</code><span>Endpoints de autenticación y usuarios, y reglas de las cuentas: siempre queda un administrador.</span></li>
+            <li><code>seguridad/ y middleware/</code><span>Contraseñas con hash, sesión JWT en una cookie HttpOnly, límite de intentos y comprobación de origen.</span></li>
+            <li><code>db/</code><span>Migraciones y conexión a PostgreSQL.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-slotspot" hidden>
+        <div data-panel="descripcion">
+            <p>Aplicación web para gestionar un parqueadero universitario con login, registro de vehículos con prefijo automático por tipo, cobro por horas de permanencia y reportes de ganancias por vehículo.</p>
+            <p>Reto que resolví: los Web Components usan Shadow DOM y sus eventos no llegaban al listener global. Cambié a <code>window.dispatchEvent()</code> y armé un bus de eventos central en <code>app.js</code>.</p>
+            <p>Tiene perfil editable, idioma ES/EN y validación de placas y espacios duplicados, con los datos en <code>localStorage</code>. El backend, con FastAPI y Docker, es por ahora la base de una API: un endpoint de salud que valida el despliegue automático.</p>
+        </div>
+        <div data-panel="estructura"><pre>slotspot-mj-frontend/
+├── index.html
+├── css/
+│   └── 7 hojas por componente
+└── js/
+    ├── app.js
+    ├── config.js
+    ├── store.js
+    ├── billing.js
+    ├── i18n.js
+    ├── utils.js
+    └── components/
+        ├── LoginPage.js
+        ├── AppNav.js
+        ├── SlotsGrid.js
+        ├── EntryForm.js
+        ├── IncomeReports.js
+        └── UserProfile.js
+
+slotspot-mj/  (backend)
+├── app/main.py
+├── tests/test_salud.py
+├── Dockerfile
+└── requirements.txt</pre></div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>LoginPage</code><span>Autenticación con sesión y opción de recordar credenciales.</span></li>
+            <li><code>AppNav</code><span>Navegación y contadores de vehículos y espacios libres.</span></li>
+            <li><code>SlotsGrid</code><span>Grilla visual de 20 espacios, libres u ocupados.</span></li>
+            <li><code>EntryForm</code><span>Registro y edición con validación de placas.</span></li>
+            <li><code>IncomeReports</code><span>Historial de pagos y totales por tipo de vehículo.</span></li>
+            <li><code>UserProfile</code><span>Perfil editable, cambio de contraseña e idioma.</span></li>
+            <li><code>billing.js</code><span>Cálculo de horas y cobro por tarifa del tipo de vehículo.</span></li>
         </ul></div>
     </div>
 
@@ -324,6 +421,20 @@
             <li><code>buscarHabitacion</code><span>Busca una habitación por su número y simula la consulta con setTimeout.</span></li>
             <li><code>cambiarEstado</code><span>Cambia el estado de una habitación: Libre, Ocupada o Limpieza.</span></li>
             <li><code>listarHabitaciones y eliminarHabitacion</code><span>Listan los registros y eliminan uno.</span></li>
+        </ul></div>
+    </div>
+
+    <div class="detalle-datos" id="detalle-dockerpulse" hidden>
+        <div data-panel="descripcion">
+            <p>Proyecto del Hackathon Samsung Innovation Campus 2025 (Centroamérica y el Caribe), en un equipo de 4 personas, con el que obtuvimos el 1.er lugar. Es un sistema de mantenimiento predictivo con IA para contenedores Docker.</p>
+            <p>Mi parte fue el frontend y la integración: diseñé el panel de monitoreo en tiempo real de contenedores Docker, con visualización de recursos y control de reinicio manual.</p>
+            <p>También lideré la integración entre frontend y backend y de las APIs de comunicación, lo que garantizó la sincronización del sistema completo.</p>
+        </div>
+        <div data-panel="modulos"><ul class="detalle-lista">
+            <li><code>Panel de monitoreo</code><span>Estado de los contenedores Docker en tiempo real, con visualización de sus recursos.</span></li>
+            <li><code>Reinicio manual</code><span>Control para reiniciar un contenedor desde el panel.</span></li>
+            <li><code>Integración</code><span>Conexión entre el frontend y el backend, y APIs de comunicación entre ambos.</span></li>
+            <li><code>Detección de anomalías</code><span>Parte de IA del proyecto: identifica comportamientos fuera de lo normal en los contenedores.</span></li>
         </ul></div>
     </div>
 
