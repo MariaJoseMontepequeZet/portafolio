@@ -30,7 +30,7 @@ export const TRADUCCIONES_EN = {
     'Ing. en Ciencias y Sistemas': 'Computer Science & Systems Eng.',
     'Certificaciones': 'Certifications',
     'Foto de María José Montepeque Zet': 'Photo of María José Montepeque Zet',
-    'Disponible para colaborar': 'Available to collaborate',
+    'Guatemala · Remoto/Híbrido · Disponible': 'Guatemala · Remote/Hybrid · Open to work',
     'Enfoque': 'Focus',
     'Áreas de trabajo': 'Areas of work',
     'Ciberseguridad': 'Cybersecurity',
