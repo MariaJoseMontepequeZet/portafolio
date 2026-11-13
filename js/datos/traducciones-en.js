@@ -309,5 +309,15 @@ export const TRADUCCIONES_EN = {
     'Cómo me comunico': 'How I communicate',
     'WhatsApp': 'WhatsApp',
     'Ubicación': 'Location',
-    'Ciudad de Guatemala, Guatemala': 'Guatemala City, Guatemala'
+    'Ciudad de Guatemala, Guatemala': 'Guatemala City, Guatemala',
+    'Diagrama de KidFit: un teléfono con el esqueleto de seguimiento de pose sobre la cámara, junto a las cuatro células del equipo, con la de Visión y cámara resaltada.': 'KidFit diagram: a phone showing the pose-tracking skeleton over the camera, next to the team\'s four cells, with the Vision and camera cell highlighted.',
+    'App móvil de ejercicio para niños, en un equipo de 10 desarrolladores organizado en 4 células. Soy desarrolladora en la célula de Visión y cámara: me encargo de integrar la cámara y MediaPipe para el seguimiento de los ejercicios en la app, que funciona en Android e iOS.': 'Mobile exercise app for kids, built by a team of 10 developers organized in 4 cells. I\'m a developer in the Vision and camera cell: I integrate the camera and MediaPipe to track the exercises in the app, which runs on Android and iOS.',
+    'App móvil de ejercicio para niños que desarrollamos en Campuslands como proyecto grupal en curso: un equipo de 10 desarrolladores repartido en 4 células.': 'Mobile exercise app for kids that we build at Campuslands as an ongoing group project: a team of 10 developers split into 4 cells.',
+    'Mi lugar es la célula de Visión y cámara. Estoy a cargo de la integración de la cámara y MediaPipe para el seguimiento de los ejercicios dentro de la app, que funciona en Android e iOS.': 'My place is the Vision and camera cell. I\'m in charge of integrating the camera and MediaPipe to track the exercises inside the app, which runs on Android and iOS.',
+    'El proyecto sigue en desarrollo y todavía no tiene repositorio público.': 'The project is still in development and has no public repository yet.',
+    'Base de la app móvil para Android e iOS.': 'Foundation of the mobile app for Android and iOS.',
+    'Lenguaje en el que se escribe la app.': 'Language the app is written in.',
+    'Seguimiento de los ejercicios a partir de la cámara.': 'Exercise tracking from the camera feed.',
+    'Integración de la cámara del dispositivo, a cargo de mi célula.': 'Integration of the device camera, handled by my cell.',
+    'Parte del stack del proyecto.': 'Part of the project stack.'
 };
