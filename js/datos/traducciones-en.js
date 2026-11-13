@@ -307,7 +307,7 @@ export const TRADUCCIONES_EN = {
     'Cómo trabajo': 'How I work',
     'Idiomas': 'Languages',
     'Cómo me comunico': 'How I communicate',
-    'Teléfono': 'Phone',
+    'WhatsApp': 'WhatsApp',
     'Ubicación': 'Location',
     'Ciudad de Guatemala, Guatemala': 'Guatemala City, Guatemala'
 };
