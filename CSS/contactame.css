@@ -92,3 +92,17 @@
     color: var(--texto-suave);
     font-size: 0.88rem;
 }
+
+.contacto-dato {
+    cursor: default;
+}
+
+.contacto-dato:hover {
+    transform: none;
+    border-color: var(--borde);
+    box-shadow: none;
+}
+
+.contacto-dato .contacto-texto small {
+    white-space: normal;
+}
